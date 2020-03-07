@@ -2,7 +2,6 @@ from attributes.attribute_common import AttributeCommon
 
 
 class AttributeProduct:
-
     IN_WISHLIST = AttributeCommon.IN_WISHLIST
     IN_COMPARE = AttributeCommon.IN_COMPARE
     # second index

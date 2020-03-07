@@ -1,5 +1,4 @@
 class AttributeCommon:
-
     # MENU
     YOUR_STORE = 'Your Store'
     MENU_DESKTOPS = 'Desktops'

@@ -2,7 +2,6 @@ from attributes.attribute_common import AttributeCommon
 
 
 class AttributeMainPage:
-
     SLIDESHOW = '#slideshow0'
     CAROUSE = '#carousel0'
     SLIDE_IPHONE = '.swiper-slide-active > a > img'
@@ -13,5 +12,3 @@ class AttributeMainPage:
     IN_WISHLIST = AttributeCommon.IN_WISHLIST
     IN_COMPARE = AttributeCommon.IN_COMPARE
     ALERT_SUCCESS = '.alert-success'
-    
-
