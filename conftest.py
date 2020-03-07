@@ -8,14 +8,19 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture(scope="session")
-def wd(request):
+def base_url(request):
+    return request.config.getoption('--url')
+
+
+@pytest.fixture(scope="session")
+def driver(request, base_url):
     """
     Браузер по умолчанию Chrome
     """
     browser = request.config.getoption('--browser')
     if browser == 'chrome':
         options = webdriver.ChromeOptions()
-        options.add_argument('headless')
+        # options.add_argument('headless')
         driver = webdriver.Chrome(options=options)
     elif browser == 'firefox':
         options = webdriver.FirefoxOptions()
@@ -24,12 +29,7 @@ def wd(request):
     else:
         raise Exception(f"{request.param} is not supported!")
     driver.maximize_window()
-
+    driver.get(base_url)
     yield driver
     driver.quit()
     return driver
-
-
-@pytest.fixture(scope="session")
-def base_url(request):
-    return request.config.getoption('--url')
