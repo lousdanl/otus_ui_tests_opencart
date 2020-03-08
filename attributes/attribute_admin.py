@@ -1,4 +1,5 @@
 class AttributeAdmin:
+    URL_ADMIN = 'admin'
 
     LOGIN_FORM = '.panel-default'
     USERNAME = '#input-username'

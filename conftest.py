@@ -12,7 +12,7 @@ def base_url(request):
     return request.config.getoption('--url')
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture()
 def driver(request, base_url):
     """
     Браузер по умолчанию Chrome
