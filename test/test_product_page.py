@@ -1,11 +1,35 @@
-from attributes.attribute_common import AttributeCommon as common
-from attributes.attribute_product import AttributeProduct as product
+import pytest
+
+from attributes.attribute_product import AttributeProduct as products
+from models.product import Product
+
+LIST_PRODUCTS = [products.MAC,
+                 products.IPHONE,
+                 products.CANONEOS5D]
 
 
-def test_assert_elemts(driver):
-    driver.find_element_by_css_selector(common.PRODUCT_MAC).click()
-    driver.find_elements_by_css_selector(product.PRICE)
-    driver.find_element_by_css_selector(product.QUANTITY)
-    driver.find_element_by_css_selector(product.IN_CART)
-    driver.find_element_by_css_selector(product.TAG_DESCRIPTION)
-    driver.find_element_by_css_selector(product.TAG_REVIEWS)
+def test_assert_elemts(wd):
+    product = Product(wd)
+    product.select_product()
+    product.find_elements()
+
+
+@pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
+def test_open_image(wd, product_from_main):
+    product = Product(wd)
+    product.select_product(product_from_main)
+    image, number = product.open_image()
+    product.switch_image(number)
+    product.close_image()
+    product.wait_staleness(image)
+
+
+@pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
+def test_add_to_cart(wd, product_from_main):
+    product = Product(wd)
+    product.select_product(product_from_main)
+    products_name = product.get_products_name()
+    product.select_option()
+    product.add_to_cart()
+    alert_text = product.alert_success()
+    assert alert_text == products.ALERT_TEXT_TO_CART % products_name

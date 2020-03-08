@@ -1,5 +1,4 @@
 class AttributeCommon:
-
     # MENU
     YOUR_STORE = 'Your Store'
     MENU_DESKTOPS = 'Desktops'
@@ -22,10 +21,13 @@ class AttributeCommon:
     IN_COMPARE = '[onclick="compare.add(\'%s\');"]'
 
     # PRODUCTS
-    PRODUCT_MAC = '[alt="MacBook"]'
-    MACBOOK = 43
-    APPLECINEMA = 42
-    CANONEOS5D = 30
-    HTC = 28
-    IPHONE = 40
-    PALMTREOPRO = 29
+    MAC = '[alt="MacBook"]'
+    IPHONE = '[alt="iPhone"]'
+    APPLECINEMA = "[alt='Apple Cinema 30\"']"
+    CANONEOS5D = '[alt="Canon EOS 5D"]'
+    ID_MACBOOK = 43
+    ID_APPLECINEMA = 42
+    ID_CANONEOS5D = 30
+    ID_HTC = 28
+    ID_IPHONE = 40
+    ID_ALMTREOPRO = 29
