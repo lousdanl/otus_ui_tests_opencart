@@ -1,16 +1,15 @@
+import json
+import os
+
 import pytest
 from selenium import webdriver
+from models.admin import Admin
 
 
 def pytest_addoption(parser):
     parser.addoption('--browser', action='store', default='chrome')
     parser.addoption('--url', action='store', default='http://10.0.2.15/opencart/')
     parser.addoption('--time', action='store', default=0)
-
-
-@pytest.fixture(scope="session")
-def base_url(request):
-    return request.config.getoption('--url')
 
 
 @pytest.fixture()
@@ -23,11 +22,11 @@ def wd(request, base_url):
 
     if browser == 'chrome':
         options = webdriver.ChromeOptions()
-        options.add_argument('headless')
+        # options.add_argument('headless')
         driver = webdriver.Chrome(options=options)
     elif browser == 'firefox':
         options = webdriver.FirefoxOptions()
-        options.add_argument('-headless')
+        # options.add_argument('-headless')
         driver = webdriver.Firefox(options=options)
     else:
         raise Exception(f"{request.param} is not supported!")
@@ -35,10 +34,37 @@ def wd(request, base_url):
     driver.implicitly_wait(request.config.getoption('--time'))
     driver.maximize_window()
 
-    driver.get(base_url)
-
     yield driver
-    driver.get(base_url)
     driver.quit()
 
     return driver
+
+
+@pytest.fixture()
+def base_url(request):
+    url = request.config.getoption('--url')
+    return url
+
+
+@pytest.fixture()
+def open_main_page(base_url, wd):
+    wd.get(base_url)
+
+
+def load_config(file):
+    config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), file)
+    with open(config_file) as conf_file:
+        target = json.load(conf_file)
+    return target
+
+
+@pytest.fixture()
+def login(wd, base_url):
+    wd.get(base_url + 'admin')
+    wed_config = load_config('target.json')['admin']
+    username = wed_config['username']
+    password = wed_config['password']
+    admin = Admin(wd)
+    admin.login(username, password)
+    yield
+    wd.find_element_by_css_selector('#header > div > ul > li:nth-child(2) > a').click()

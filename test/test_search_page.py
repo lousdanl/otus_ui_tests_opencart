@@ -2,7 +2,7 @@ from attributes.attribute_common import AttributeCommon as common
 from attributes.attribute_search import AttributeSearch as search
 
 
-def test_assert_elements(wd):
+def test_assert_elements(wd, open_main_page):
     wd.find_element_by_css_selector(common.INPUT_SEARCH).send_keys('macbook')
     wd.find_element_by_css_selector(common.SUBMIT_SEARCH).click()
     wd.find_element_by_css_selector(search.INPUT_SEARCH)

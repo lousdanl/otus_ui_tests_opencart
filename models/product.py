@@ -74,7 +74,7 @@ class Product:
     def get_price(self):
         """ Return product's price"""
         price = self.wd.find_element_by_css_selector(product.CONTENT)
-        price = price.find_element_bycss_selector(product.PRICE)
+        price = price.find_element_by_css_selector(product.PRICE)
         return price
 
     def get_products_name(self):
