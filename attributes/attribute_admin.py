@@ -10,6 +10,7 @@ class AttributeAdmin:
     MENU_CATALOG = '[href="#collapse1"]'
     CATALOG = '#collapse1'
     PRODUCTS = CATALOG + ' > li:nth-child(2) > a'
+    ATTRIBUTE_HREF = 'href'
 
     ADD_PRODUCT = '[data-original-title="Add New"]'
     TAB_GENERAL = '[href="#tab-general"]'

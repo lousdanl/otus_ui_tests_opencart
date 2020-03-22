@@ -51,6 +51,11 @@ def open_main_page(base_url, wd):
     wd.get(base_url)
 
 
+@pytest.fixture()
+def open_admin_page(base_url, wd):
+    wd.get(base_url + 'admin')
+
+
 def load_config(file):
     config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), file)
     with open(config_file) as conf_file:
@@ -59,8 +64,7 @@ def load_config(file):
 
 
 @pytest.fixture()
-def login(wd, base_url):
-    wd.get(base_url + 'admin')
+def login(wd, open_admin_page):
     wed_config = load_config('target.json')['admin']
     username = wed_config['username']
     password = wed_config['password']

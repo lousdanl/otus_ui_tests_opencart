@@ -2,14 +2,12 @@ import pytest
 
 from models.admin import Admin
 
+PRODUCT = [0, 10]
 
-def test_assert_elements(wd, base_url):
-    wd.get(base_url + 'admin')
+
+def test_assert_elements(wd, open_admin_page):
     admin = Admin(wd)
     admin.find_elements()
-
-
-PRODUCT = [0]
 
 
 def test_add_new_product(wd, login):

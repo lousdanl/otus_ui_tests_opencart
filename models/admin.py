@@ -35,7 +35,7 @@ class Admin:
     def open_catalog_products(self):
         """Go to Products page"""
         products = self.wd.find_element_by_css_selector(admin.PRODUCTS)
-        products = products.get_attribute('href')
+        products = products.get_attribute(admin.ATTRIBUTE_HREF)
         self.wd.get(products)
 
     def get_count_pages(self):
