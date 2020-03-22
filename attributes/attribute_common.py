@@ -2,7 +2,7 @@ class AttributeCommon:
     # MENU
     YOUR_STORE = 'Your Store'
     MENU_DESKTOPS = 'Desktops'
-    SELECT_ALL_DESKTOPS = 'Show All Desktops'
+    SELECT_ALL_DESKTOPS = 'Show AllDesktops'
 
     # SEARCH
     INPUT_SEARCH = '.form-control.input-lg'

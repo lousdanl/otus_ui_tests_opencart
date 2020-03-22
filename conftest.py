@@ -3,18 +3,18 @@ import os
 
 import pytest
 from selenium import webdriver
+
 from models.admin import Admin
 
 
 def pytest_addoption(parser):
     parser.addoption('--browser', action='store', default='chrome')
-    parser.addoption('--url', action='store', default='http://10.0.2.15/opencart/')
+    parser.addoption('--url', action='store', default='http://localhost/opencart/')
     parser.addoption('--time', action='store', default=0)
 
 
 @pytest.fixture()
 def wd(request, base_url):
-
     """
     Браузер по умолчанию Chrome
     """
@@ -22,11 +22,11 @@ def wd(request, base_url):
 
     if browser == 'chrome':
         options = webdriver.ChromeOptions()
-        # options.add_argument('headless')
+        options.add_argument('headless')
         driver = webdriver.Chrome(options=options)
     elif browser == 'firefox':
         options = webdriver.FirefoxOptions()
-        # options.add_argument('-headless')
+        options.add_argument('-headless')
         driver = webdriver.Firefox(options=options)
     else:
         raise Exception(f"{request.param} is not supported!")

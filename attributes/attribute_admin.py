@@ -36,7 +36,6 @@ class AttributeAdmin:
     PRICE_AFTER = '.text-danger'
     ELEMENT_PAGINATION = '.pagination'
     NEXT_PAGE = 'li:nth-child(3) > a'
-    PAGE_PRODUCTS = '#content > div.container-fluid > div > div.col-md-9.col-md-pull-3.col-sm-12 > div > div.panel-body > div > div.col-sm-6.text-left > ul > li:nth-child(3) > a'
     ALERT_WARNING = '.alert-danger.alert-dismissible'
     TEXT_WARNING_ALERT = 'Warning: Please check the form carefully for errors!'
     DANGER_TEXT = '.text-danger'

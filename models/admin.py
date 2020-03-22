@@ -2,13 +2,12 @@ import time
 
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-from models import generate_data
 
 from attributes.attribute_admin import AttributeAdmin as admin
+from models import generate_data
 
 
 class Admin:
@@ -49,11 +48,11 @@ class Admin:
         pagination = self.wd.find_element_by_css_selector(admin.ELEMENT_PAGINATION)
         pagination.find_element_by_css_selector(admin.NEXT_PAGE).click()
 
-    def to_first_page(self):
-        """Go to main Products page if page not first"""
-        url = self.wd.current_url
-        if 'page=' in url:
-            self.wd.find_element_by_xpath("//*[contains(text(), '1')]").click()
+    # def to_first_page(self):
+    #     """Go to main Products page if page not first"""
+    #     url = self.wd.current_url
+    #     if 'page=' in url:
+    #         self.wd.find_element_by_xpath("//*[contains(text(), '1')]").click()
 
     def get_products_from_one_page(self):
         """Return quantity  products on one page"""
@@ -78,7 +77,6 @@ class Admin:
                 time.sleep(0.1)
             else:
                 break
-        self.to_first_page()
         return list_products
 
     def get_one_product(self, number):
@@ -92,7 +90,8 @@ class Admin:
     def click_save_changes(self):
         self.wd.find_element_by_css_selector(admin.BUTTON_SAVE).click()
 
-    def click_edit_product(self, product):
+    @classmethod
+    def click_edit_product(cls, product):
         product.find_element_by_css_selector(admin.BUTTON_EDIT).click()
 
     def click_button_copy(self):
@@ -110,7 +109,8 @@ class Admin:
             if product_name not in products:
                 return product_name
 
-    def product_price(self, one_product):
+    @classmethod
+    def product_price(cls, one_product):
         """Looking for price product"""
         product = one_product.find_elements_by_css_selector(admin.TAMLE_PROD_PRICE)[0]
         try:
@@ -123,7 +123,8 @@ class Admin:
         price = price.replace('$', '').split('.')
         return int(price[0])
 
-    def select_product(self, product):
+    @classmethod
+    def select_product(cls, product):
         """Clicks on checkbox to focus to product"""
         product_name = product.find_elements_by_css_selector(admin.TABLE_PROD_NAME)[0]
         product_name = product_name.text
@@ -207,7 +208,8 @@ class Admin:
                 count_same_product += 1
         return count_same_product
 
-    def assert_count_same_products(self, count):
+    @classmethod
+    def assert_count_same_products(cls, count):
         if count > 1:
             return True
         else:
