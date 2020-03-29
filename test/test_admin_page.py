@@ -1,18 +1,20 @@
 import pytest
 
-from models.admin import Admin
+from models import Admin, AdminCommon, AdminSession
+
 
 PRODUCT = [0, 10]
 
 
 def test_assert_elements(wd, open_admin_page):
-    admin = Admin(wd)
+    admin = AdminSession(wd)
     admin.find_elements()
 
 
 def test_add_new_product(wd, login):
+    common = AdminCommon(wd)
     admin = Admin(wd)
-    admin.open_catalog_products()
+    common.open_catalog_products()
     product_name = admin.product_data()
     admin.click_new_product()
     admin.assert_validation_add_form()
@@ -25,8 +27,9 @@ def test_add_new_product(wd, login):
 
 @pytest.mark.parametrize('product_number', PRODUCT)
 def test_edit_product(wd, login, product_number):
+    common = AdminCommon(wd)
     admin = Admin(wd)
-    admin.open_catalog_products()
+    common.open_catalog_products()
     one_product = admin.get_one_product(product_number)
     price = admin.product_price(one_product)
     admin.click_edit_product(one_product)
@@ -40,8 +43,9 @@ def test_edit_product(wd, login, product_number):
 
 @pytest.mark.parametrize('product_number', PRODUCT)
 def test_delete_product(wd, login, product_number):
+    common = AdminCommon(wd)
     admin = Admin(wd)
-    admin.open_catalog_products()
+    common.open_catalog_products()
     first_product = admin.get_one_product(product_number)
     product_name = admin.select_product(first_product)
     admin.click_button_copy()

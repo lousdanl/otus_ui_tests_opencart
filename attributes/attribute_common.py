@@ -1,30 +1,31 @@
 class AttributeCommon:
+
     # MENU
-    YOUR_STORE = 'Your Store'
-    MENU_DESKTOPS = 'Desktops'
-    SELECT_ALL_DESKTOPS = 'Show AllDesktops'
+    YOUR_STORE = ('css', 'Your Store')
+    MENU_DESKTOPS = ('text', 'Desktops')
+    SELECT_ALL_DESKTOPS = ('text', 'Show AllDesktops')
 
     # SEARCH
-    INPUT_SEARCH = '.form-control.input-lg'
-    SUBMIT_SEARCH = '.input-group-btn .btn-lg'
+    INPUT_SEARCH = ('css', '.form-control.input-lg')
+    SUBMIT_SEARCH = ('css', '.input-group-btn .btn-lg')
 
     # CATEGORIES
-    GRID = '#grid-view'
-    LIST = '#list-view'
-    SORT = '#input-sort'
-    SHOW_LIMIT = '#input-limit'
-    COMPARE = '#compare-total'
+    GRID = ('css', '#grid-view')
+    LIST = ('css', '#list-view')
+    SORT = ('css', '#input-sort')
+    SHOW_LIMIT = ('css', '#input-limit')
+    COMPARE = ('css', '#compare-total')
 
     # COMMON BUTTONS
-    IN_CART = '[onclick="cart.add(\'%s\', \'1\');"]'
-    IN_WISHLIST = '[onclick="wishlist.add(\'%s\');"]'
-    IN_COMPARE = '[onclick="compare.add(\'%s\');"]'
+    IN_CART = ('css', '[onclick="cart.add(\'%s\', \'1\');"]')
+    IN_WISHLIST = ('css', '[onclick="wishlist.add(\'%s\');"]')
+    IN_COMPARE = ('css', '[onclick="compare.add(\'%s\');"]')
 
     # PRODUCTS
-    MAC = '[alt="MacBook"]'
-    IPHONE = '[alt="iPhone"]'
-    APPLECINEMA = "[alt='Apple Cinema 30\"']"
-    CANONEOS5D = '[alt="Canon EOS 5D"]'
+    MAC = ('css', '[alt="MacBook"]')
+    IPHONE = ('css', '[alt="iPhone"]')
+    APPLECINEMA = ('css', "[alt='Apple Cinema 30\"']")
+    CANONEOS5D = ('css', '[alt="Canon EOS 5D"]')
     ID_MACBOOK = 43
     ID_APPLECINEMA = 42
     ID_CANONEOS5D = 30

@@ -1,86 +1,68 @@
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from attributes.attribute_product import AttributeProduct as product
+
+from attributes import AttributeProduct as product
+from .base import Base
 
 
-class Product:
-
-    def __init__(self, wd):
-        self.wd = wd
-
-    @property
-    def wait(self):
-        return WebDriverWait(self.wd, 10)
+class Product(Base):
 
     def find_elements(self):
         """Find elements"""
-        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, product.PRICE)))
-        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, product.QUANTITY)))
-        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, product.IN_CART)))
-        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, product.TAG_DESCRIPTION)))
-        self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, product.TAG_REVIEWS)))
-
-    def select_product(self, element=product.MAC):
-        """Selects product on Main Page"""
-        try:
-            self.wd.find_element_by_css_selector(element).click()
-        except NoSuchElementException:
-            print(f'Error: product {element} not found')
+        self._wait_element(product.CONTENT)
+        self._wait_element(product.QUANTITY)
+        self._wait_element(product.IN_CART)
+        self._wait_element(product.TAG_DESCRIPTION)
+        self._wait_element(product.TAG_REVIEWS)
 
     def open_image(self):
         """Open image
-        Return image element  and number of images
+        Return image element and number of images
         """
-        images = self.wd.find_elements_by_css_selector(product.IMAGE_ADDITIONAL)
+        images = self._elements(product.IMAGE_ADDITIONAL)
         image = images[0]
-        image.click()
-        image = self.wait.until(EC.visibility_of_element_located(
-            (By.CSS_SELECTOR, product.IMAGE_OPEN)))
+        self._click(image)
+        image = self._wait_element(product.IMAGE_OPEN)
         number = len(images)
         return image, number
 
     def switch_image(self, number):
         """Click next image"""
         for i in range(number):
-            self.wd.find_element_by_css_selector(product.NEXT_IMAGE).click()
-            self.wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, product.IMAGE_OPEN)))
+            self._click(product.NEXT_IMAGE)
+            self._wait_element(product.IMAGE_OPEN)
 
     def close_image(self):
         """Close image"""
-        self.wd.find_element_by_css_selector(product.IMAGE_CLOSE).click()
+        self._click(product.IMAGE_CLOSE)
 
     def wait_staleness(self, image):
         """Waiting for an item to disappear"""
-        self.wait.until(EC.staleness_of(image))
+        self.wait_staleness_of(image)
 
     def select_option(self):
         """If product have option, make a selection"""
         try:
-            option = Select(self.wd.find_element_by_css_selector(product.OPTION226))
-            option.select_by_index(1)
+            self.menu_select_by_index(product.OPTION226, 1)
         except NoSuchElementException:
             print("Product don't have option")
 
     def add_to_cart(self):
         """ CLick button add product to cart"""
         try:
-            self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, product.IN_CART))).click()
+            button = self._wait_clickable(product.IN_CART)
+            self._click(button)
         except TimeoutException:
             print(f'Error: locator {product.IN_CART} not found')
 
     def get_price(self):
         """ Return product's price"""
-        price = self.wd.find_element_by_css_selector(product.CONTENT)
-        price = price.find_element_by_css_selector(product.PRICE)
+        price = self._in_element(product.CONTENT, product.PRICE)
         return price
 
     def get_products_name(self):
         """ Return product's name"""
-        name = self.wd.find_element_by_css_selector(product.CONTENT)
-        name = name.find_element_by_css_selector(product.NAME_PRODUCT).text
+        name = self._in_element(product.CONTENT, product.NAME_PRODUCT)
+        name = name.text
         return name
 
     def alert_success(self):
@@ -88,7 +70,6 @@ class Product:
         Find alert success
         Return text
         """
-        alert_text = self.wait.until(EC.visibility_of_element_located(
-            (By.CSS_SELECTOR, product.ALERT_SUCCESS)))
+        alert_text = self._wait_element(product.ALERT_SUCCESS)
         alert_text = alert_text.text
         return alert_text[:-2]
