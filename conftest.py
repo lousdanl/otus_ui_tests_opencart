@@ -4,7 +4,7 @@ import os
 import pytest
 from selenium import webdriver
 
-from models.admin import Admin
+from models import AdminSession
 
 
 def pytest_addoption(parser):
@@ -68,7 +68,7 @@ def login(wd, open_admin_page):
     wed_config = load_config('target.json')['admin']
     username = wed_config['username']
     password = wed_config['password']
-    admin = Admin(wd)
+    admin = AdminSession(wd)
     admin.login(username, password)
     yield
-    wd.find_element_by_css_selector('#header > div > ul > li:nth-child(2) > a').click()
+    admin.logout()

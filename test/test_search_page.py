@@ -1,13 +1,8 @@
-from attributes.attribute_common import AttributeCommon as common
-from attributes.attribute_search import AttributeSearch as search
+from models import Common, Search
 
 
 def test_assert_elements(wd, open_main_page):
-    wd.find_element_by_css_selector(common.INPUT_SEARCH).send_keys('macbook')
-    wd.find_element_by_css_selector(common.SUBMIT_SEARCH).click()
-    wd.find_element_by_css_selector(search.INPUT_SEARCH)
-    wd.find_element_by_css_selector(search.SELECT_CATEGORIES)
-    wd.find_element_by_css_selector(search.CHECKBOX_DESCRIPTION)
-    wd.find_element_by_css_selector(search.LIST)
-    wd.find_element_by_css_selector(search.GRID)
-    wd.find_element_by_css_selector(search.SORT)
+    common = Common(wd)
+    search = Search(wd)
+    common.start_search()
+    search.find_elements()

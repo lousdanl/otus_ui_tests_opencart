@@ -1,12 +1,9 @@
-from attributes.attribute_category import AttributeCategory as category
-from attributes.attribute_common import AttributeCommon as common
+from models import Category, Common
 
 
 def test_asserts_elements(wd, open_main_page):
-    wd.find_element_by_link_text(common.MENU_DESKTOPS).click()
-    wd.find_element_by_link_text(common.SELECT_ALL_DESKTOPS).click()
-    wd.find_element_by_css_selector(category.BREADCRUMB)
-    wd.find_element_by_css_selector(category.SHOW_LIMIT)
-    wd.find_element_by_css_selector(category.GRID)
-    wd.find_element_by_css_selector(category.LIST)
-    wd.find_element_by_css_selector(category.SORT)
+    common = Common(wd)
+    category = Category(wd)
+    common.menu_all_desktops()
+    category.find_elements()
+

@@ -1,31 +1,23 @@
-from attributes.attribute_common import AttributeCommon
+from .attribute_common import AttributeCommon
 
 
-class AttributeProduct:
-    IN_WISHLIST = AttributeCommon.IN_WISHLIST
-    IN_COMPARE = AttributeCommon.IN_COMPARE
-    CONTENT = '#content'
-    NAME_PRODUCT = 'h1'
-    PRICE = 'h2'
-    OPTION226 = '#input-option226'
-    QUANTITY = '#input-quantity'
-    IN_CART = '#button-cart'
-    TAG_DESCRIPTION = '[href="#tab-description"]'
-    DESCRIPTION = '#tab-description'
-    TAG_REVIEWS = '[href="#tab-review"]'
-    INPUT_NAME = '#input-name'
-    INPUN_REVIEW = '#input-review'
-    RAITING = 'input[name="rating"][value="%s"]'
-    CONTINUE = '#button-review'
-    IMAGE_ADDITIONAL = '.image-additional a'
-    IMAGE_OPEN = '.mfp-figure'
-    IMAGE_CLOSE = '.mfp-close'
-    NEXT_IMAGE = '[title="Next (Right arrow key)"]'
-    ALERT_SUCCESS = '.alert-success'
+class AttributeProduct(AttributeCommon):
+    CONTENT = ('css', '#content')
+    NAME_PRODUCT = ('css', 'h1')
+    PRICE = ('css', 'h2')
+    OPTION226 = ('css', '#input-option226')
+    QUANTITY = ('css', '#input-quantity')
+    IN_CART = ('css', '#button-cart')
+    TAG_DESCRIPTION = ('css', '[href="#tab-description"]')
+    DESCRIPTION = ('css', '#tab-description')
+    TAG_REVIEWS = ('css', '[href="#tab-review"]')
+    INPUT_NAME = ('css', '#input-name')
+    INPUN_REVIEW = ('css', '#input-review')
+    RAITING = ('css', 'input[name="rating"][value="%s"]')
+    CONTINUE = ('css', '#button-review')
+    IMAGE_ADDITIONAL = ('css', '.image-additional a')
+    IMAGE_OPEN = ('css', '.mfp-figure')
+    IMAGE_CLOSE = ('css', '.mfp-close')
+    NEXT_IMAGE = ('css', '[title="Next (Right arrow key)"]')
+    ALERT_SUCCESS = ('css', '.alert-success')
     ALERT_TEXT_TO_CART = 'Success: You have added %s to your shopping cart!'
-
-    # Products
-    MAC = AttributeCommon.MAC
-    IPHONE = AttributeCommon.IPHONE
-    APPLECINEMA = AttributeCommon.APPLECINEMA
-    CANONEOS5D = AttributeCommon.CANONEOS5D
