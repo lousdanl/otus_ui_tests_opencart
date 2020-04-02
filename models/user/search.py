@@ -1,5 +1,5 @@
-from attributes import AttributeSearch as search
-from .base import Base
+from locators import LocatorsSearch as search
+from models import Base
 
 
 class Search(Base):

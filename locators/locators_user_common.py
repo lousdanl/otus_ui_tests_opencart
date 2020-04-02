@@ -1,4 +1,4 @@
-class AttributeCommon:
+class LocatorsUserCommon:
 
     # MENU
     YOUR_STORE = ('css', 'Your Store')

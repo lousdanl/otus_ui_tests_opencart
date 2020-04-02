@@ -1,5 +1,5 @@
-from attributes import AttributeCategory as category
-from .base import Base
+from locators import LocatorsCategory as category
+from models.base import Base
 
 
 class Category(Base):

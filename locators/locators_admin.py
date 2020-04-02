@@ -1,4 +1,4 @@
-class AttributeAdmin:
+class LocatorsAdmin:
     URL_ADMIN = 'admin'
 
     # LOGIN
@@ -21,11 +21,13 @@ class AttributeAdmin:
     BUTTON_DELETE = ('css', '[data-original-title="Delete"]')
     BUTTON_EDIT = ('css', '[data-original-title="Edit"]')
     BUTTON_COPY = ('css', '[data-original-title="Copy"]')
+    BUTTON_CLOSE = ('css', '#filemanager .modal-header .close')
 
     # EDIT PRODUCT
     TAB_GENERAL = ('css', '[href="#tab-general"]')
     TAB_DATA = ('css', '[href="#tab-data"]')
     TAB_SPECIAL = ('css', '[href="#tab-special"]')
+    TAB_IMAGE = ('css', '[href="#tab-image"]')
     PRODUCT_NAME = ('css', '#input-name1')
     META_TAG_TITLE = ('css', '#input-meta-title1')
     MODEL = ('css', '#input-model')
@@ -51,3 +53,12 @@ class AttributeAdmin:
     TEXT_WARNING_ALERT = 'Warning: Please check the form carefully for errors!'
     DANGER_TEXT = ('css', '.text-danger')
     ALERT_SUCCESS = ('css', '.alert-success')
+
+    # INPUT IMAGE
+    EDIT_IMAGE = ('css', '.img-thumbnail img')
+    BUTTON_EDIT_IMAGE = ('css', '#button-image i')
+    BUTTON_UPLOAD = ('css', '#button-upload')
+    ATTRIBUTE_IMAGE = ('css', '[alt="%s"]')
+    CHECKBOX_IMAGE = ('css', '[value="catalog/%s"]')
+    FORM_INPUT = ('css', '#form-upload')
+    INPUT_FILE = ('css', "input[type='file']")

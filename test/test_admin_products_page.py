@@ -1,9 +1,9 @@
 import pytest
 
-from models import Admin, AdminCommon, AdminSession
-
+from models.admin import AdminProducts, AdminCommon, AdminSession
 
 PRODUCT = [0, 10]
+IMAGE = ['test_image.jpg']
 
 
 def test_assert_elements(wd, open_admin_page):
@@ -11,15 +11,17 @@ def test_assert_elements(wd, open_admin_page):
     admin.find_elements()
 
 
-def test_add_new_product(wd, login):
+@pytest.mark.parametrize('image', IMAGE)
+def test_add_new_product(wd, login, image):
     common = AdminCommon(wd)
-    admin = Admin(wd)
+    admin = AdminProducts(wd)
     common.open_catalog_products()
-    product_name = admin.product_data()
+    product_name, product_model = admin.product_data()
     admin.click_new_product()
     admin.assert_validation_add_form()
     admin.fill_general(product_name)
-    admin.fill_data(product_name)
+    admin.fill_data(product_model)
+    admin.added_image(image)
     admin.click_save_changes()
     products = admin.get_name_all_products()
     assert product_name in products
@@ -28,7 +30,7 @@ def test_add_new_product(wd, login):
 @pytest.mark.parametrize('product_number', PRODUCT)
 def test_edit_product(wd, login, product_number):
     common = AdminCommon(wd)
-    admin = Admin(wd)
+    admin = AdminProducts(wd)
     common.open_catalog_products()
     one_product = admin.get_one_product(product_number)
     price = admin.product_price(one_product)
@@ -44,7 +46,7 @@ def test_edit_product(wd, login, product_number):
 @pytest.mark.parametrize('product_number', PRODUCT)
 def test_delete_product(wd, login, product_number):
     common = AdminCommon(wd)
-    admin = Admin(wd)
+    admin = AdminProducts(wd)
     common.open_catalog_products()
     first_product = admin.get_one_product(product_number)
     product_name = admin.select_product(first_product)

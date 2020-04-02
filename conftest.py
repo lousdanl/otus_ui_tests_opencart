@@ -3,8 +3,9 @@ import os
 
 import pytest
 from selenium import webdriver
+from context_manager import context_manager_for_read_file
 
-from models import AdminSession
+from models.admin import AdminSession
 
 
 def pytest_addoption(parser):
@@ -22,7 +23,7 @@ def wd(request, base_url):
 
     if browser == 'chrome':
         options = webdriver.ChromeOptions()
-        options.add_argument('headless')
+        # options.add_argument('headless')
         driver = webdriver.Chrome(options=options)
     elif browser == 'firefox':
         options = webdriver.FirefoxOptions()
@@ -58,7 +59,7 @@ def open_admin_page(base_url, wd):
 
 def load_config(file):
     config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), file)
-    with open(config_file) as conf_file:
+    with context_manager_for_read_file(config_file) as conf_file:
         target = json.load(conf_file)
     return target
 

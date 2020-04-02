@@ -1,5 +1,5 @@
-from .base import Base
-from attributes import AttributeAdmin as admin
+from locators import LocatorsAdmin as admin
+from models import Base
 
 
 class AdminSession(Base):

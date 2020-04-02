@@ -1,8 +1,8 @@
 import pytest
 
-from attributes import AttributeProduct as products
-from attributes import AttributeMain as main
-from models import Main, Product
+from locators import LocatorsProduct as products
+from locators import LocatorsMain as main
+from models.user import Main, Product
 
 LIST_PRODUCTS = [main.MAC,
                  main.IPHONE,

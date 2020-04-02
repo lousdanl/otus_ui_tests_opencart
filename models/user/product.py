@@ -1,7 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
-from attributes import AttributeProduct as product
-from .base import Base
+from locators import LocatorsProduct as product
+from models import Base
 
 
 class Product(Base):

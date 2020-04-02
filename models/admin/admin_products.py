@@ -1,13 +1,14 @@
+import json
 import time
 
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
+from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, NoAlertPresentException
 
-from attributes import AttributeAdmin as admin
-from models import generate_data
-from .base import Base
+from context_manager import context_manager_for_read_file, context_manager_for_correction_file
+from locators import LocatorsAdmin as admin
+from models import Base, Common
 
 
-class Admin(Base):
+class AdminProducts(Common, Base):
 
     def get_count_pages(self):
         """Return count pages with products"""
@@ -65,14 +66,33 @@ class Admin(Base):
     def click_button_delete(self):
         self._click(admin.BUTTON_DELETE)
 
+    @classmethod
+    def read_product_file(cls, file):
+        with context_manager_for_read_file(file) as product_id_file:
+            reader = json.load(product_id_file)
+            product_id = reader['product']
+            return product_id
+
+    @classmethod
+    def write_product_file(cls, file, product_id):
+        with context_manager_for_correction_file(file) as product_id_file:
+            product = {'product': product_id}
+            json.dump(product, product_id_file, indent=2)
+
     def product_data(self):
         """Gets names of all products generates a new one, no matches"""
         products = self.get_name_all_products()
+        product_file = self.get_file_direction('product_file.json')
+        product_id = self.read_product_file(product_file)
         while True:
-            product_id = generate_data.random_data(3)
+            product_id = int(product_id)
+            product_id += 1
+            product_id = str(product_id)
             product_name = 'Product ' + product_id
+            product_model = 'Model ' + product_id
             if product_name not in products:
-                return product_name
+                self.write_product_file(product_file, product_id)
+                return product_name, product_model
 
     def product_price(self, one_product):
         """Looking for price product"""
@@ -104,6 +124,9 @@ class Admin(Base):
     def section_special(self):
         self._wait_click(admin.TAB_SPECIAL)
 
+    def section_image(self):
+        self._wait_click(admin.TAB_IMAGE)
+
     def assert_validation_add_form(self):
         """Verify that the empty field is not saved, all important fields must be filled"""
         self.click_save_changes()
@@ -123,11 +146,11 @@ class Admin(Base):
         """Fills price"""
         self._input(admin.PRICE_TAB_DATA, price)
 
-    def fill_data(self, product_name):
+    def fill_data(self, product_model):
         """Fills fields, model, quantity, sort, status"""
         self.section_data()
         self.send_keys_price(100)
-        self._input(admin.MODEL, product_name)
+        self._input(admin.MODEL, product_model)
         self._input(admin.QUANTITY, 10)
         self._input(admin.SORT, 20)
         self.menu_select(admin.STATUS, '1')
@@ -168,3 +191,23 @@ class Admin(Base):
 
     def wait_alert_success(self):
         self._wait_element(admin.ALERT_SUCCESS)
+
+    def select_edit_image(self):
+        self._click(admin.EDIT_IMAGE)
+        self._click(admin.BUTTON_EDIT_IMAGE)
+        self._wait_element(admin.BUTTON_UPLOAD)
+
+    def select_new_image(self, image):
+        new_image = self.add_id(admin.ATTRIBUTE_IMAGE, image)
+        self._click(new_image)
+
+    def close_modal_edit_image(self):
+        self._wait_click(admin.BUTTON_CLOSE)
+
+    def added_image(self, image):
+        self.section_image()
+        self.select_edit_image()
+        self.upload_file(image)
+        time.sleep(1)
+        self.accept_web_alert()
+        self.select_new_image(image)

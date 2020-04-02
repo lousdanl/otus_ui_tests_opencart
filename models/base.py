@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -75,7 +77,7 @@ class Base:
 
     def _input(self, selector, value):
         """Внесение данных"""
-        element = self._element(selector)
+        element = self._elements(selector)[0]
         element.clear()
         element.send_keys(value)
 
@@ -121,3 +123,13 @@ class Base:
         selector = list(selector)
         selector = selector[0], selector[1] % product_id
         return tuple(selector)
+
+    def remove_attribute(self, element_id, name_attribute):
+        self.wd.execute_script('document.getElementById("%s").removeAttribute("%s")' % (element_id, name_attribute))
+        time.sleep(0.5)
+
+    def _click_b(self, selector):
+        self.wd.execute_script(f"$({selector}).click();")
+
+    def add_element_to_body(self, element):
+        self.wd.execute_script(f'$(\'body\').prepend(\'{element}\')')
