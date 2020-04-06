@@ -1,4 +1,4 @@
-from models import Category, Common
+from models.user import Category, Common
 
 
 def test_asserts_elements(wd, open_main_page):
@@ -6,4 +6,3 @@ def test_asserts_elements(wd, open_main_page):
     category = Category(wd)
     common.menu_all_desktops()
     category.find_elements()
-

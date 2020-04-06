@@ -1,7 +1,7 @@
-from .attribute_common import AttributeCommon
+from .locators_user_common import LocatorsUserCommon
 
 
-class AttributeProduct(AttributeCommon):
+class LocatorsProduct(LocatorsUserCommon):
     CONTENT = ('css', '#content')
     NAME_PRODUCT = ('css', 'h1')
     PRICE = ('css', 'h2')

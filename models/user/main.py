@@ -1,7 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException
 
-from attributes import AttributeMain as main
-from .base import Base
+from locators import LocatorsMain as main
+from models import Base
 
 
 class Main(Base):

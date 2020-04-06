@@ -1,7 +1,7 @@
-from .attribute_common import AttributeCommon
+from .locators_user_common import LocatorsUserCommon
 
 
-class AttributeMain(AttributeCommon):
+class LocatorsMain(LocatorsUserCommon):
     SLIDESHOW = ('css', '#slideshow0')
     CAROUSE = ('css', '#carousel0')
     SLIDE_IPHONE = ('css', '.swiper-slide-active > a > img')
