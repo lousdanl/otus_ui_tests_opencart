@@ -12,8 +12,11 @@ from models.admin import AdminSession
 
 
 def pytest_addoption(parser):
+    parser.addoption('--grid', action='store', default='off', choices=['on', 'off'])
     parser.addoption('--browser', action='store', default='chrome')
-    parser.addoption('--url', action='store', default='http://localhost/opencart/')
+    parser.addoption('--platform', action='store', default='windows')
+    parser.addoption('--executor', action='store', default='localhost')
+    parser.addoption('--url', action='store', default='http://192.168.50.210/opencart/')
     parser.addoption('--time', action='store', default=0)
     parser.addoption('--file', action='store', default='output.log')
 
@@ -47,26 +50,38 @@ def wd(request, base_url, logger):
     Браузер по умолчанию Chrome
     """
     browser = request.config.getoption('--browser')
+    platform = request.config.getoption('--platform')
+    grid = request.config.getoption('--grid')
+    executor = request.config.getoption("--executor")
+
     if browser == 'chrome':
         options = webdriver.ChromeOptions()
         options.add_argument('headless')
-        driver = webdriver.Chrome(options=options)
     elif browser == 'firefox':
         options = webdriver.FirefoxOptions()
         options.add_argument('-headless')
-        driver = webdriver.Firefox(options=options)
     else:
         logger.exception(f"{request.param} is not supported!")
         raise Exception
 
-    driver = EventFiringWebDriver(driver, WdEventListener(logging.getLogger('DRIVER')))
+    if grid == 'on':
+        capabilities = options.to_capabilities()
+        capabilities['platformName'] = platform
+        hub = f"http://{executor}:4444/wd/hub"
+        driver = webdriver.Remote(command_executor=hub, desired_capabilities=capabilities)
+    elif grid == 'off':
+
+        if browser == 'chrome':
+            driver = webdriver.Chrome(options=options)
+        elif browser == 'firefox':
+            driver = webdriver.Firefox(options=options)
+
     logger.info(f'Getting started browser {browser}')
+    driver = EventFiringWebDriver(driver, WdEventListener(logging.getLogger('DRIVER')))
     driver.implicitly_wait(request.config.getoption('--time'))
     driver.maximize_window()
+
     yield driver
-    logs = driver.get_log('browser')
-    for i in logs:
-        print(i)
     driver.quit()
     logger.info(f'Browser {browser} shutdown')
 
