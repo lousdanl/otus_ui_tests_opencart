@@ -1,3 +1,5 @@
+import logging
+
 from selenium.common.exceptions import NoSuchElementException
 
 from locators import LocatorsMain as main
@@ -5,6 +7,12 @@ from models import Base
 
 
 class Main(Base):
+
+    def __init__(self, wd):
+        super().__init__(wd)
+        self.name = 'USER MAIN'
+        self.logger = logging.getLogger(self.name)
+        self.logger.info(f'Initialization {self.name} page')
 
     def find_elements(self):
         """Find elements"""

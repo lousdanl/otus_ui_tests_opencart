@@ -1,8 +1,15 @@
+import logging
+
 from locators import LocatorsSearch as search
 from models import Base
 
 
 class Search(Base):
+    def __init__(self, wd):
+        super().__init__(wd)
+        self.name = 'USER_SEARCH'
+        self.logger = logging.getLogger(self.name)
+        self.logger.info(f'Initialization {self.name} page')
 
     def find_elements(self):
         """Find elements"""
