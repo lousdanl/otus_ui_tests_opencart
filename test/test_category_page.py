@@ -6,4 +6,4 @@ def test_asserts_elements(wd, open_main_page):
     common.menu_all_desktops()
     category = Category(wd)
     category.find_elements()
-    assert category.get_logs_browser()
+    assert category.logs_have_errors()

@@ -9,7 +9,7 @@ IMAGE = ['test_image.jpg']
 def test_assert_elements(wd, open_admin_page):
     admin = AdminSession(wd)
     admin.find_elements()
-    assert admin.get_logs_browser()
+    assert admin.logs_have_errors()
 
 
 @pytest.mark.parametrize('image', IMAGE)
@@ -26,7 +26,7 @@ def test_add_new_product(wd, login, image):
     admin.click_save_changes()
     products = admin.get_name_all_products()
     assert product_name in products
-    assert admin.get_logs_browser()
+    assert admin.logs_have_errors()
 
 
 @pytest.mark.parametrize('product_number', PRODUCT)
@@ -43,7 +43,7 @@ def test_edit_product(wd, login, product_number):
     one_product = admin.get_one_product(product_number)
     price_from_page = admin.product_price(one_product)
     assert new_price == price_from_page
-    assert admin.get_logs_browser()
+    assert admin.logs_have_errors()
 
 
 @pytest.mark.parametrize('product_number', PRODUCT)
@@ -64,4 +64,4 @@ def test_delete_product(wd, login, product_number):
     admin.wait_alert_success()
     count = admin.count_same_products(product_name)
     assert admin.assert_count_same_products(count) is False
-    assert admin.get_logs_browser()
+    assert admin.logs_have_errors()

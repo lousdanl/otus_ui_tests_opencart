@@ -144,7 +144,7 @@ class Base:
     def add_element_to_body(self, element):
         self.wd.execute_script(f'$(\'body\').prepend(\'{element}\')')
 
-    def get_logs_browser(self):
+    def logs_have_errors(self):
         browser_logs = self.wd.get_log("browser")
         logs = []
         for log in browser_logs:

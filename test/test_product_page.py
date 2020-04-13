@@ -14,7 +14,7 @@ def test_assert_elemts(wd, open_main_page):
     main.select_product()
     product = Product(wd)
     product.find_elements()
-    assert main.get_logs_browser()
+    assert main.logs_have_errors()
 
 
 @pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
@@ -26,7 +26,7 @@ def test_open_image(wd, open_main_page, product_from_main):
     product.switch_image(number)
     product.close_image()
     product.wait_staleness(image)
-    assert main.get_logs_browser()
+    assert main.logs_have_errors()
 
 
 @pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
@@ -39,4 +39,4 @@ def test_add_to_cart(wd, open_main_page, product_from_main):
     product.add_to_cart()
     alert_text = product.alert_success()
     assert alert_text == products.ALERT_TEXT_TO_CART % products_name
-    assert main.get_logs_browser()
+    assert main.logs_have_errors()
