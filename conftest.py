@@ -12,10 +12,9 @@ from models.admin import AdminSession
 
 
 def pytest_addoption(parser):
-    parser.addoption('--grid', action='store', default='off', choices=['on', 'off'])
-    parser.addoption('--browser', action='store', default='chrome')
-    parser.addoption('--platform', action='store', default='windows')
-    parser.addoption('--executor', action='store', default='localhost')
+    parser.addoption('--selenoid', action='store', default=True)
+    parser.addoption('--browser', action='store', default='opera', choices=["chrome", "firefox", "opera"])
+    parser.addoption('--executor', action='store', default='192.168.50.109')
     parser.addoption('--url', action='store', default='http://192.168.50.210/opencart/')
     parser.addoption('--time', action='store', default=0)
     parser.addoption('--file', action='store', default='output.log')
@@ -50,33 +49,31 @@ def wd(request, base_url, logger):
     Браузер по умолчанию Chrome
     """
     browser = request.config.getoption('--browser')
-    platform = request.config.getoption('--platform')
-    grid = request.config.getoption('--grid')
+    selenoid = request.config.getoption('--selenoid')
     executor = request.config.getoption("--executor")
 
-    if browser == 'chrome':
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
-    elif browser == 'firefox':
-        options = webdriver.FirefoxOptions()
-        options.add_argument('-headless')
-    else:
-        logger.exception(f"{request.param} is not supported!")
-        raise Exception
-
-    if grid == 'on':
-        capabilities = options.to_capabilities()
-        capabilities['platformName'] = platform
+    if selenoid:
+        capabilities = {
+            "browserName": browser,
+            "version": "",
+            "enableVNC": True,
+            "enableVideo": False
+        }
         hub = f"http://{executor}:4444/wd/hub"
         driver = webdriver.Remote(command_executor=hub, desired_capabilities=capabilities)
-    elif grid == 'off':
+    else:
 
         if browser == 'chrome':
+            options = webdriver.ChromeOptions()
+            options.add_argument('headless')
             driver = webdriver.Chrome(options=options)
         elif browser == 'firefox':
+            options = webdriver.FirefoxOptions()
+            options.add_argument('-headless')
             driver = webdriver.Firefox(options=options)
 
     logger.info(f'Getting started browser {browser}')
+
     driver = EventFiringWebDriver(driver, WdEventListener(logging.getLogger('DRIVER')))
     driver.implicitly_wait(request.config.getoption('--time'))
     driver.maximize_window()
