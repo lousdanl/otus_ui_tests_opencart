@@ -1,0 +1,29 @@
+INFO     root:conftest.py:76 Getting started browser chrome
+INFO     DRIVER:listener.py:12 Go to http://192.168.50.210/opencart/
+INFO     DRIVER:listener.py:15 Open http://192.168.50.210/opencart/
+INFO     USER MAIN:main.py:16 Initialization USER MAIN page
+INFO     DRIVER:listener.py:24 Looking for '[alt="iPhone"]' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '[alt="iPhone"]' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     USER_PRODUCT:product.py:16 Initialization USER_PRODUCT page
+INFO     DRIVER:listener.py:24 Looking for '#content' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#content' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for 'h1' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element 'h1' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '#input-option226' with 'css selector'
+ERROR    DRIVER:listener.py:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#input-option226"}
+  (Session info: headless chrome=81.0.4044.113)
+
+INFO     DRIVER:listener.py:24 Looking for '#button-cart' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#button-cart' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     DRIVER:listener.py:24 Looking for '.alert-success' with 'css selector'
+ERROR    DRIVER:listener.py:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":".alert-success"}
+  (Session info: headless chrome=81.0.4044.113)
+
+INFO     DRIVER:listener.py:24 Looking for '.alert-success' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '.alert-success' with 'css selector'
+INFO     DRIVER:listener.py:42 Browser shutdown
+INFO     root:conftest.py:84 Browser chrome shutdown

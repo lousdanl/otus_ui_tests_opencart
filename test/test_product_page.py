@@ -1,15 +1,16 @@
+import allure
 import pytest
 
 from locators import LocatorsMain as main
 from locators import LocatorsProduct as products
 from models.user import Main, Product
 
-LIST_PRODUCTS = [main.MAC,
-                 main.IPHONE,
+LIST_PRODUCTS = [main.IPHONE,
                  main.CANONEOS5D]
 
 
-def test_assert_elemts(wd, open_main_page):
+@allure.severity(allure.severity_level.NORMAL)
+def test_assert_elements(wd, open_main_page):
     main = Main(wd)
     main.select_product()
     product = Product(wd)
@@ -17,6 +18,7 @@ def test_assert_elemts(wd, open_main_page):
     assert main.logs_have_errors()
 
 
+@allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
 def test_open_image(wd, open_main_page, product_from_main):
     main = Main(wd)
@@ -29,6 +31,7 @@ def test_open_image(wd, open_main_page, product_from_main):
     assert main.logs_have_errors()
 
 
+@allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
 def test_add_to_cart(wd, open_main_page, product_from_main):
     main = Main(wd)

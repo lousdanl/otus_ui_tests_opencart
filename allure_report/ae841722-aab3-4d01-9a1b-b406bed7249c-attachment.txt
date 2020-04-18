@@ -1,0 +1,18 @@
+INFO     root:conftest.py:76 Getting started browser chrome
+INFO     DRIVER:listener.py:12 Go to http://192.168.50.210/opencart/
+INFO     DRIVER:listener.py:15 Open http://192.168.50.210/opencart/
+INFO     USER MAIN:main.py:16 Initialization USER MAIN page
+INFO     DRIVER:listener.py:24 Looking for '#slideshow0' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#slideshow0' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '#carousel0' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#carousel0' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '#content' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#content' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '.swiper-pagination-bullet-active' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '.swiper-pagination-bullet-active' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '[onclick="wishlist.add('40');"]' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '[onclick="wishlist.add('40');"]' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '[onclick="compare.add('30');"]' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '[onclick="compare.add('30');"]' with 'css selector'
+INFO     DRIVER:listener.py:42 Browser shutdown
+INFO     root:conftest.py:84 Browser chrome shutdown

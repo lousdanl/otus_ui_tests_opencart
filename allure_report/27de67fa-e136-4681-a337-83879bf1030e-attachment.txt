@@ -1,0 +1,5 @@
+INFO     root:conftest.py:76 Getting started browser chrome
+INFO     DRIVER:listener.py:12 Go to http://192.168.50.210/opencart/
+INFO     DRIVER:listener.py:15 Open http://192.168.50.210/opencart/
+INFO     DRIVER:listener.py:42 Browser shutdown
+INFO     root:conftest.py:84 Browser chrome shutdown

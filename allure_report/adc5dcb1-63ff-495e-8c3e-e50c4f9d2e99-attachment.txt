@@ -1,0 +1,31 @@
+INFO     root:conftest.py:77 Getting started browser chrome
+INFO     DRIVER:listener.py:12 Go to http://192.168.50.210/opencart/
+INFO     DRIVER:listener.py:15 Open http://192.168.50.210/opencart/
+INFO     USER MAIN:main.py:15 Initialization USER MAIN page
+INFO     DRIVER:listener.py:24 Looking for '[alt="Canon EOS 5D"]' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '[alt="Canon EOS 5D"]' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     USER_PRODUCT:product.py:15 Initialization USER_PRODUCT page
+INFO     DRIVER:listener.py:24 Looking for '#content' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#content' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for 'h1' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element 'h1' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '#input-option226' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#input-option226' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for 'option' with 'tag name'
+INFO     DRIVER:listener.py:27 Found element 'option' with 'tag name'
+INFO     DRIVER:listener.py:30 Click on <selenium.webdriver.remote.webelement.WebElement (session="ccf5ee3b725506a59eaf322cfb32b01e", element="181af1d1-d678-4973-a335-ba33e7f7b5d5")>
+INFO     DRIVER:listener.py:33 Click on <selenium.webdriver.remote.webelement.WebElement (session="ccf5ee3b725506a59eaf322cfb32b01e", element="181af1d1-d678-4973-a335-ba33e7f7b5d5")> is success
+INFO     DRIVER:listener.py:24 Looking for '#button-cart' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#button-cart' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     DRIVER:listener.py:24 Looking for '.alert-success' with 'css selector'
+ERROR    DRIVER:listener.py:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":".alert-success"}
+  (Session info: headless chrome=81.0.4044.113)
+
+INFO     DRIVER:listener.py:24 Looking for '.alert-success' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '.alert-success' with 'css selector'
+INFO     DRIVER:listener.py:42 Browser shutdown
+INFO     root:conftest.py:85 Browser chrome shutdown

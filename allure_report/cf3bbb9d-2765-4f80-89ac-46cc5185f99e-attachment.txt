@@ -1,0 +1,56 @@
+INFO     root:conftest.py:77 Getting started browser chrome
+INFO     DRIVER:listener.py:12 Go to http://192.168.50.210/opencart/admin
+INFO     DRIVER:listener.py:15 Open http://192.168.50.210/opencart/admin
+INFO     ADMIN_SESSION:admin_session.py:13 Initialization ADMIN_SESSION page
+INFO     DRIVER:listener.py:24 Looking for '#input-username' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#input-username' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '#input-password' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#input-password' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '.btn-primary' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '.btn-primary' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     ADMIN COMMON:admin_common.py:13 Initialization ADMIN COMMON page
+INFO     DRIVER:listener.py:24 Looking for '#collapse1 > li:nth-child(2) > a' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#collapse1 > li:nth-child(2) > a' with 'css selector'
+INFO     DRIVER:listener.py:12 Go to http://192.168.50.210/opencart/admin/index.php?route=catalog/product&user_token=TkLEJHconwEUjxF2e8yefoC1SfoOn7pz
+INFO     DRIVER:listener.py:15 Open http://192.168.50.210/opencart/admin/index.php?route=catalog/product&user_token=TkLEJHconwEUjxF2e8yefoC1SfoOn7pz
+INFO     COMMON:common.py:16 Initialization COMMON page
+INFO     ADMIN_PRODUCTS:admin_products.py:19 Initialization ADMIN_PRODUCTS page
+INFO     DRIVER:listener.py:24 Looking for 'tbody tr' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element 'tbody tr' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '.text-right' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '.text-right' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '[style="text-decoration: line-through;"]' with 'css selector'
+ERROR    DRIVER:listener.py:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[style="text-decoration: line-through;"]"}
+  (Session info: headless chrome=81.0.4044.113)
+
+INFO     DRIVER:listener.py:24 Looking for '[data-original-title="Edit"]' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '[data-original-title="Edit"]' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     DRIVER:listener.py:24 Looking for '[href="#tab-data"]' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '[href="#tab-data"]' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     DRIVER:listener.py:24 Looking for '#input-price' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#input-price' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '[data-original-title="Save"]' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '[data-original-title="Save"]' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     DRIVER:listener.py:24 Looking for '.alert-success' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '.alert-success' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for 'tbody tr' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element 'tbody tr' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '.text-right' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '.text-right' with 'css selector'
+INFO     DRIVER:listener.py:24 Looking for '[style="text-decoration: line-through;"]' with 'css selector'
+ERROR    DRIVER:listener.py:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[style="text-decoration: line-through;"]"}
+  (Session info: headless chrome=81.0.4044.113)
+INFO     DRIVER:listener.py:24 Looking for '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+INFO     DRIVER:listener.py:27 Found element '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+INFO     DRIVER:listener.py:36 Executing script:'arguments[0].click();'
+INFO     DRIVER:listener.py:39 Executing script 'arguments[0].click();' is done
+INFO     DRIVER:listener.py:42 Browser shutdown
+INFO     root:conftest.py:85 Browser chrome shutdown

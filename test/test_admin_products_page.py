@@ -1,4 +1,5 @@
 import pytest
+import allure
 
 from models.admin import AdminProducts, AdminCommon, AdminSession
 
@@ -6,12 +7,14 @@ PRODUCT = [0, 10]
 IMAGE = ['test_image.jpg']
 
 
+@allure.severity(allure.severity_level.NORMAL)
 def test_assert_elements(wd, open_admin_page):
     admin = AdminSession(wd)
     admin.find_elements()
     assert admin.logs_have_errors()
 
 
+@allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.parametrize('image', IMAGE)
 def test_add_new_product(wd, login, image):
     common = AdminCommon(wd)
@@ -29,6 +32,7 @@ def test_add_new_product(wd, login, image):
     assert admin.logs_have_errors()
 
 
+@allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.parametrize('product_number', PRODUCT)
 def test_edit_product(wd, login, product_number):
     common = AdminCommon(wd)
@@ -46,6 +50,7 @@ def test_edit_product(wd, login, product_number):
     assert admin.logs_have_errors()
 
 
+@allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.parametrize('product_number', PRODUCT)
 def test_delete_product(wd, login, product_number):
     common = AdminCommon(wd)
