@@ -71,13 +71,18 @@ class Base:
         return element.find_elements(by, locator)
 
     def _click(self, selector):
-        """Метод для работы с кнопками"""
+        """Метод для работы с кнопками через js"""
+        element = self._element_method(selector)
+        self.wd.execute_script("arguments[0].click();", element)
+
+    def _click_(self, selector):
+        """Метод для работы с кнопками: не работает """
         element = self._element_method(selector)
         ActionChains(self.wd).move_to_element(element).click().perform()
 
     def _input(self, selector, value):
         """Внесение данных"""
-        element = self._elements(selector)[0]
+        element = self._element_method(selector)
         element.clear()
         element.send_keys(value)
 
@@ -107,6 +112,11 @@ class Base:
         element = self._wait_element(selector)
         self._click(element)
 
+    def _wait_input(self, selector, value):
+        """Ожидание элемента, ввод данных"""
+        element = self._wait_element(selector)
+        self._input(element, value)
+
     def menu_select(self, select, value):
         """Селект по значению"""
         menu = Select(self._element(select))
@@ -133,3 +143,14 @@ class Base:
 
     def add_element_to_body(self, element):
         self.wd.execute_script(f'$(\'body\').prepend(\'{element}\')')
+
+    def logs_have_errors(self):
+        browser_logs = self.wd.get_log("browser")
+        logs = []
+        for log in browser_logs:
+            message = log.get('level')
+            logs.append(message)
+        if 'SEVERE' not in logs:
+            return True
+        else:
+            return False

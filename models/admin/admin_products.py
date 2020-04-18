@@ -1,7 +1,9 @@
 import json
+import logging
 import time
+from pathlib import Path
 
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, NoAlertPresentException
+from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 
 from context_manager import context_manager_for_read_file, context_manager_for_correction_file
 from locators import LocatorsAdmin as admin
@@ -9,6 +11,12 @@ from models import Base, Common
 
 
 class AdminProducts(Common, Base):
+
+    def __init__(self, wd):
+        super().__init__(wd)
+        self.name = 'ADMIN_PRODUCTS'
+        self.logger = logging.getLogger(self.name)
+        self.logger.info(f'Initialization {self.name} page')
 
     def get_count_pages(self):
         """Return count pages with products"""
@@ -82,7 +90,8 @@ class AdminProducts(Common, Base):
     def product_data(self):
         """Gets names of all products generates a new one, no matches"""
         products = self.get_name_all_products()
-        product_file = self.get_file_direction('product_file.json')
+        product_file = Path(__file__).resolve().parent.parent.parent. \
+            joinpath('test_data').joinpath('product_file.json')
         product_id = self.read_product_file(product_file)
         while True:
             product_id = int(product_id)

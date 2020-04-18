@@ -1,3 +1,5 @@
+import logging
+
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
 from locators import LocatorsProduct as product
@@ -5,6 +7,12 @@ from models import Base
 
 
 class Product(Base):
+
+    def __init__(self, wd):
+        super().__init__(wd)
+        self.name = 'USER_PRODUCT'
+        self.logger = logging.getLogger(self.name)
+        self.logger.info(f'Initialization {self.name} page')
 
     def find_elements(self):
         """Find elements"""

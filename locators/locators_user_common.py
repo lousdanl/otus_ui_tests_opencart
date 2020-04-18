@@ -1,5 +1,4 @@
 class LocatorsUserCommon:
-
     # MENU
     YOUR_STORE = ('css', 'Your Store')
     MENU_DESKTOPS = ('text', 'Desktops')

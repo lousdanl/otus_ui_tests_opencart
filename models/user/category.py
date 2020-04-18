@@ -1,8 +1,16 @@
+import logging
+
 from locators import LocatorsCategory as category
 from models.base import Base
 
 
 class Category(Base):
+
+    def __init__(self, wd):
+        super().__init__(wd)
+        self.name = 'USER_CATEGORY'
+        self.logger = logging.getLogger(self.name)
+        self.logger.info(f'Initialization {self.name} page')
 
     def find_elements(self):
         """Find elements"""
