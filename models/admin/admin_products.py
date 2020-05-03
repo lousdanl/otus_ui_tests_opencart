@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 import time
 from pathlib import Path
 
@@ -34,7 +35,7 @@ class AdminProducts(Common, Base):
         if int(len(products)) > 0:
             return products
         else:
-            raise ValueError
+            raise Exception
 
     def get_name_all_products(self):
         """Return name of all products from all pages"""
@@ -51,6 +52,7 @@ class AdminProducts(Common, Base):
                 time.sleep(0.1)
             else:
                 break
+        self._click(admin.FIRST_PAGE)
         return list_products
 
     def get_one_product(self, number):
@@ -72,7 +74,10 @@ class AdminProducts(Common, Base):
         self._click(admin.BUTTON_COPY)
 
     def click_button_delete(self):
-        self._click(admin.BUTTON_DELETE)
+        self._wait_click(admin.BUTTON_DELETE)
+
+    def click_button_cancel_edit(self):
+        self._wait_click(admin.BUTTON_CANCEL_EDIT)
 
     @classmethod
     def read_product_file(cls, file):
@@ -220,3 +225,10 @@ class AdminProducts(Common, Base):
         time.sleep(1)
         self.accept_web_alert()
         self.select_new_image(image)
+
+    def get_product_id_from_page(self, product):
+        button = self._in_element(product, admin.BUTTON_EDIT)
+        attributes = self.wd.execute_script(admin.SCRIPT_FIND_ATTRIBUTES, button)
+        url = attributes.get('href')
+        product_id = re.search(r'product_id=(\d+)?', url).group(1)
+        return int(product_id)

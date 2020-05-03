@@ -2,5 +2,12 @@
   "admin": {
     "username": "admin",
     "password": "admin"
+  },
+  "db": {
+    "host": "127.0.0.1",
+    "user": "root",
+    "password": "",
+    "db": "opencart",
+    "charset": "utf8mb4"
   }
 }

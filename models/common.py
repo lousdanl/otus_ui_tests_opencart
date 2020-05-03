@@ -15,14 +15,13 @@ class Common(Base):
         self.logger = logging.getLogger(self.name)
         self.logger.info(f'Initialization {self.name} page')
 
-    def token_from_url(self):
+    def token_from_url(self, pattern):
         url = self.wd.current_url
-        pattern = r'user_token=(.+)&?'
-        user_token = re.search(pattern, url)
-        return user_token[1]
+        token = re.search(pattern, url)
+        return token[1]
 
     def add_form_input_in_body(self):
-        user_token = self.token_from_url()
+        user_token = self.token_from_url(r'user_token=(.+)&?')
         script_add_form = common.FORM_INPUT.format(user_token=user_token)
         self.wd.execute_script(script_add_form)
 
@@ -33,3 +32,6 @@ class Common(Base):
             joinpath('test_data').joinpath(filename)
         input_upload = self._element(common.INPUT_FILE)
         input_upload.send_keys(str(dir_file))
+
+    def get_product_id(self):
+        return self.token_from_url(r'product_id=(\d+)?')

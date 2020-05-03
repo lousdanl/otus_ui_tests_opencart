@@ -138,3 +138,16 @@ idea/
 .idea/modules.xml
 .idea/testing_api.iml
 .idea/vcs.xml
+
+# log
+output.log
+
+# screenshots
+.screenshots/
+.screenshots
+screenshots/
+
+# allure_report
+.allure_report/
+.allure_report
+allure_report/

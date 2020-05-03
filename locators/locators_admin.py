@@ -22,6 +22,7 @@ class LocatorsAdmin:
     BUTTON_EDIT = ('css', '[data-original-title="Edit"]')
     BUTTON_COPY = ('css', '[data-original-title="Copy"]')
     BUTTON_CLOSE = ('css', '#filemanager .modal-header .close')
+    BUTTON_CANCEL_EDIT = ('css', '[data-original-title="Cancel"]')
 
     # EDIT PRODUCT
     TAB_GENERAL = ('css', '[href="#tab-general"]')
@@ -46,6 +47,7 @@ class LocatorsAdmin:
     PRICE_AFTER = ('css', '.text-danger')
     ELEMENT_PAGINATION = ('css', '.pagination')
     NEXT_PAGE = ('css', 'li:nth-child(3) > a')
+    FIRST_PAGE = ('xpath', "//*[text()='1']")
     CHECKBOX_PROD = ('css', '[type="checkbox"]')
 
     # ALERTS
@@ -62,3 +64,8 @@ class LocatorsAdmin:
     CHECKBOX_IMAGE = ('css', '[value="catalog/%s"]')
     FORM_INPUT = ('css', '#form-upload')
     INPUT_FILE = ('css', "input[type='file']")
+
+    # SCRIPTS
+    SCRIPT_FIND_ATTRIBUTES = 'var items = {}; for (index = 0; index < arguments[0].attributes.length; ++index) { ' \
+                             'items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value }; ' \
+                              'return items; '

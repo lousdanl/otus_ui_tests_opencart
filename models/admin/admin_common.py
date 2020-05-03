@@ -1,4 +1,5 @@
 import logging
+import re
 
 from locators import LocatorsAdmin as admin
 from models import Base
@@ -17,3 +18,4 @@ class AdminCommon(Base):
         products = self._element(admin.PRODUCTS)
         products = products.get_attribute(admin.ATTRIBUTE_HREF)
         self.wd.get(products)
+

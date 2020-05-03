@@ -10,7 +10,6 @@ def context_manager_for_read_file(path_read):
         print('File not found or unavailable')
     finally:
         file_open.close()
-        print('Closing files')
 
 
 @contextmanager
@@ -22,4 +21,3 @@ def context_manager_for_correction_file(path_write):
         print('File not found or unavailable')
     finally:
         file_open.close()
-        print('Closing files')

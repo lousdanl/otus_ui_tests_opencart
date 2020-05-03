@@ -9,6 +9,7 @@ from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriv
 from context_manager import context_manager_for_read_file
 from logs.listener import WdEventListener
 from models.admin import AdminSession
+from db.db_mysql import DbMySql
 
 
 def pytest_addoption(parser):
@@ -66,7 +67,7 @@ def wd(request, base_url, logger):
 
         if browser == 'chrome':
             options = webdriver.ChromeOptions()
-            options.add_argument('headless')
+            # options.add_argument('headless')
             driver = webdriver.Chrome(options=options)
         elif browser == 'firefox':
             options = webdriver.FirefoxOptions()
@@ -119,3 +120,16 @@ def login(wd, open_admin_page):
     admin.login(username, password)
     yield
     admin.logout()
+
+
+@pytest.fixture(scope="session")
+def db():
+    """
+    Конект к базе данных
+    """
+    db_config = load_config('target.json')['db']
+    dbmysql = DbMySql(host=db_config['host'], user=db_config['user'], password=db_config['password'],
+                      db=db_config['db'], charset=db_config['charset'])
+    yield dbmysql
+    dbmysql.destroy()
+    return dbmysql
