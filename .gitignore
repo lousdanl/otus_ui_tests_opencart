@@ -130,24 +130,19 @@ dmypy.json
 
 # idea
 .idea/
-.idea
-idea/
 
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/testing_api.iml
-.idea/vcs.xml
 
 # log
 output.log
+logs/
+.logs
 
 # screenshots
-.screenshots/
 .screenshots
 screenshots/
 
+
 # allure_report
-.allure_report/
 .allure_report
 allure_report/
+

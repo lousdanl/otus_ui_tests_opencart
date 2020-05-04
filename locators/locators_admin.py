@@ -40,15 +40,17 @@ class LocatorsAdmin:
 
     # ELEMENTS
     COUNT_PAGES = ('css', '.col-sm-6.text-right')
-    COUNT_PRODUCTS = ('css', 'tbody tr')
+    PRODUCTS_ON_PAGE = ('css', 'tbody tr')
     TABLE_PROD_NAME = ('css', '.text-left')
-    TAMLE_PROD_PRICE = ('css', '.text-right')
+    TABLE_PROD_PRICE = ('css', '.text-right')
     PRICE_BEFORE = ('css', '[style="text-decoration: line-through;"]')
     PRICE_AFTER = ('css', '.text-danger')
     ELEMENT_PAGINATION = ('css', '.pagination')
     NEXT_PAGE = ('css', 'li:nth-child(3) > a')
     FIRST_PAGE = ('xpath', "//*[text()='1']")
-    CHECKBOX_PROD = ('css', '[type="checkbox"]')
+    LAST_PAGE = ('xpath', "//*[text()='>|']")
+    PREVIOUS_PAGE = ('xpath', "//*[text()='<']")
+    PRODUCT_CHECKBOX = ('css', '[type="checkbox"]')
 
     # ALERTS
     ALERT_WARNING = ('css', '.alert-danger.alert-dismissible')
@@ -68,4 +70,6 @@ class LocatorsAdmin:
     # SCRIPTS
     SCRIPT_FIND_ATTRIBUTES = 'var items = {}; for (index = 0; index < arguments[0].attributes.length; ++index) { ' \
                              'items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value }; ' \
-                              'return items; '
+                             'return items; '
+
+    SELECT_PRODUCT_BY_ID = ('xpath', '//input[@value="%s"]/../..')

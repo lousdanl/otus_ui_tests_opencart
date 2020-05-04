@@ -1,0 +1,22 @@
+{
+  "oc_product": {
+    "sku": "",
+    "upc": "",
+    "ean": "",
+    "jan": "",
+    "isbn": "",
+    "mpn": "",
+    "location": "",
+    "quantity": 10,
+    "stock_status_id": 6,
+    "manufacturer_id": 0,
+    "tax_class_id": 0
+  },
+  "oc_product_description": {
+    "language_id": 1,
+    "description": "",
+    "tag": "",
+    "meta_description": "",
+    "meta_keyword": ""
+  }
+}

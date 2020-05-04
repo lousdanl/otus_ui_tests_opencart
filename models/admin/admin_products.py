@@ -1,23 +1,29 @@
 import json
 import logging
-import re
 import time
 from pathlib import Path
+from datetime import datetime
 
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
+from selenium.common.exceptions import (
+    NoSuchElementException,
+    StaleElementReferenceException,
+)
 
-from context_manager import context_manager_for_read_file, context_manager_for_correction_file
+from context_manager import (
+    context_manager_for_read_file,
+    context_manager_for_correction_file,
+)
 from locators import LocatorsAdmin as admin
 from models import Base, Common
+from db.check_data import CheckData
 
 
 class AdminProducts(Common, Base):
-
     def __init__(self, wd):
         super().__init__(wd)
-        self.name = 'ADMIN_PRODUCTS'
+        self.name = "ADMIN_PRODUCTS"
         self.logger = logging.getLogger(self.name)
-        self.logger.info(f'Initialization {self.name} page')
+        self.logger.info(f"Initialization {self.name} page")
 
     def get_count_pages(self):
         """Return count pages with products"""
@@ -31,11 +37,11 @@ class AdminProducts(Common, Base):
 
     def get_products_from_one_page(self):
         """Return quantity  products on one page"""
-        products = self._elements(admin.COUNT_PRODUCTS)
-        if int(len(products)) > 0:
-            return products
-        else:
+        products = self._elements(admin.PRODUCTS_ON_PAGE)
+        if not len(products):
             raise Exception
+        else:
+            return products
 
     def get_name_all_products(self):
         """Return name of all products from all pages"""
@@ -83,34 +89,38 @@ class AdminProducts(Common, Base):
     def read_product_file(cls, file):
         with context_manager_for_read_file(file) as product_id_file:
             reader = json.load(product_id_file)
-            product_id = reader['product']
+            product_id = reader["product"]
             return product_id
 
     @classmethod
     def write_product_file(cls, file, product_id):
         with context_manager_for_correction_file(file) as product_id_file:
-            product = {'product': product_id}
+            product = {"product": product_id}
             json.dump(product, product_id_file, indent=2)
 
     def product_data(self):
         """Gets names of all products generates a new one, no matches"""
         products = self.get_name_all_products()
-        product_file = Path(__file__).resolve().parent.parent.parent. \
-            joinpath('test_data').joinpath('product_file.json')
+        product_file = (
+            Path(__file__)
+            .resolve()
+            .parent.parent.parent.joinpath("test_data")
+            .joinpath("product_file.json")
+        )
         product_id = self.read_product_file(product_file)
         while True:
             product_id = int(product_id)
             product_id += 1
             product_id = str(product_id)
-            product_name = 'Product ' + product_id
-            product_model = 'Model ' + product_id
+            product_name = "Product " + product_id
+            product_model = "Model " + product_id
             if product_name not in products:
                 self.write_product_file(product_file, product_id)
                 return product_name, product_model
 
     def product_price(self, one_product):
         """Looking for price product"""
-        product = self._in_elements(one_product, admin.TAMLE_PROD_PRICE)[0]
+        product = self._in_elements(one_product, admin.TABLE_PROD_PRICE)[0]
         try:
             price_before = self._in_element(product, admin.PRICE_BEFORE).text
             price = price_before
@@ -118,15 +128,17 @@ class AdminProducts(Common, Base):
             price = product.text
         except NoSuchElementException:
             price = product.text
-        price = price.replace('$', '').split('.')
+        price = price.replace("$", "").split(".")
         return int(price[0])
 
     def select_product(self, product):
         """Clicks on checkbox to focus to product"""
+        checkbox = self._in_element(product, admin.PRODUCT_CHECKBOX)
+        self._click(checkbox)
+
+    def get_product_name(self, product):
         product_name = self._in_elements(product, admin.TABLE_PROD_NAME)[0]
         product_name = product_name.text
-        checkbox = self._in_element(product, admin.CHECKBOX_PROD)
-        self._click(checkbox)
         return product_name
 
     def section_general(self):
@@ -146,7 +158,7 @@ class AdminProducts(Common, Base):
         self.click_save_changes()
         alert_warning = self._wait_element(admin.ALERT_WARNING)
         alert_warning = alert_warning.text
-        alert_warning = alert_warning[: -2].strip()
+        alert_warning = alert_warning[:-2].strip()
         assert admin.TEXT_WARNING_ALERT == alert_warning
         assert 3 == len(self._elements(admin.DANGER_TEXT))
 
@@ -167,7 +179,7 @@ class AdminProducts(Common, Base):
         self._input(admin.MODEL, product_model)
         self._input(admin.QUANTITY, 10)
         self._input(admin.SORT, 20)
-        self.menu_select(admin.STATUS, '1')
+        self.menu_select(admin.STATUS, "1")
 
     def edit_price_in_section_special(self, price):
         """Fills price of sale"""
@@ -227,8 +239,30 @@ class AdminProducts(Common, Base):
         self.select_new_image(image)
 
     def get_product_id_from_page(self, product):
-        button = self._in_element(product, admin.BUTTON_EDIT)
-        attributes = self.wd.execute_script(admin.SCRIPT_FIND_ATTRIBUTES, button)
-        url = attributes.get('href')
-        product_id = re.search(r'product_id=(\d+)?', url).group(1)
+        value = self._in_element(product, admin.PRODUCT_CHECKBOX)
+        product_id = value.get_attribute("value")
         return int(product_id)
+
+    @staticmethod
+    def get_date_today():
+        date_today = datetime.now()
+        date_available = date_today.strftime("%Y-%m-%d")
+        date_added = date_today.strftime("%Y-%m-%d %H:%M:%S")
+        return date_available, date_added
+
+    def data_for_new_product(self):
+        product_name, product_model = self.product_data()
+        date_available, date_added = self.get_date_today()
+        return product_name, product_model, date_available, date_added
+
+    def find_product_by_id(self, product_id):
+        count_pages = self.get_count_pages()
+        if count_pages > 1:
+            self._click(admin.LAST_PAGE)
+        for i in range(count_pages):
+            try:
+                locator = self.add_id(admin.SELECT_PRODUCT_BY_ID, product_id)
+                product = self._element(locator)
+                return product
+            except NoSuchElementException:
+                self._click(admin.PREVIOUS_PAGE)

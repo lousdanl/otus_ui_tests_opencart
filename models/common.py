@@ -33,5 +33,3 @@ class Common(Base):
         input_upload = self._element(common.INPUT_FILE)
         input_upload.send_keys(str(dir_file))
 
-    def get_product_id(self):
-        return self.token_from_url(r'product_id=(\d+)?')
