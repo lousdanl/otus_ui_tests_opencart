@@ -8,16 +8,15 @@ from models import Base
 
 
 class Product(Base):
-
     def __init__(self, wd):
         super().__init__(wd)
-        self.name = 'USER_PRODUCT'
+        self.name = "USER_PRODUCT"
         self.logger = logging.getLogger(self.name)
-        self.logger.info(f'Initialization {self.name} page')
+        self.logger.info(f"Initialization {self.name} page")
 
     def find_elements(self):
         """Find elements"""
-        with allure.step('Поиск элементов'):
+        with allure.step("Поиск элементов"):
             self._wait_element(product.CONTENT)
             self._wait_element(product.QUANTITY)
             self._wait_element(product.IN_CART)
@@ -28,7 +27,7 @@ class Product(Base):
         """Open image
         Return image element and number of images
         """
-        with allure.step('Открыть изображение продукта'):
+        with allure.step("Открыть изображение продукта"):
             images = self._elements(product.IMAGE_ADDITIONAL)
             image = images[0]
             self._click(image)
@@ -38,24 +37,24 @@ class Product(Base):
 
     def switch_image(self, number):
         """Click next image"""
-        with allure.step('Переключение изображений'):
+        with allure.step("Переключение изображений"):
             for i in range(number):
                 self._click(product.NEXT_IMAGE)
                 self._wait_element(product.IMAGE_OPEN)
 
     def close_image(self):
         """Close image"""
-        with allure.step('Закрыть изображение'):
+        with allure.step("Закрыть изображение"):
             self._click(product.IMAGE_CLOSE)
 
     def wait_staleness(self, image):
         """Waiting for an item to disappear"""
-        with allure.step('Ожидание исчезновения картинки'):
+        with allure.step("Ожидание исчезновения картинки"):
             self.wait_staleness_of(image)
 
     def select_option(self):
         """If product have option, make a selection"""
-        with allure.step('Выбор опций, если есть'):
+        with allure.step("Выбор опций, если есть"):
             try:
                 self.menu_select_by_index(product.OPTION226, 1)
             except NoSuchElementException:
@@ -63,23 +62,23 @@ class Product(Base):
 
     def add_to_cart(self):
         """ CLick button add product to cart"""
-        with allure.step('Добавление продукта в корзину'):
+        with allure.step("Добавление продукта в корзину"):
             try:
                 button = self._wait_clickable(product.IN_CART)
                 self._click(button)
             except TimeoutException:
-                print(f'Error: locator {product.IN_CART} not found')
+                print(f"Error: locator {product.IN_CART} not found")
 
     def get_price(self):
         """ Return product's price"""
-        with allure.step('Получить стоимость продукта'):
+        with allure.step("Получить стоимость продукта"):
             price = self._in_element(product.CONTENT, product.PRICE)
-            with allure.step(f'Вернуть стоимость {price}'):
+            with allure.step(f"Вернуть стоимость {price}"):
                 return price
 
     def get_products_name(self):
         """ Return product's name"""
-        with allure.step('Поулчить наименование продукта'):
+        with allure.step("Поулчить наименование продукта"):
             name = self._in_element(product.CONTENT, product.NAME_PRODUCT)
             name = name.text
             return name
@@ -89,7 +88,7 @@ class Product(Base):
         Find alert success
         Return text
         """
-        with allure.step('Проверка появления сообщения'):
+        with allure.step("Проверка появления сообщения"):
             alert_text = self._wait_element(product.ALERT_SUCCESS)
             alert_text = alert_text.text
             return alert_text[:-2]

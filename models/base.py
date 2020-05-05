@@ -16,11 +16,11 @@ class Base:
     def _selector_method(cls, selector: tuple):
         """Выбор селектора"""
         by = None
-        if selector[0] == 'css':
+        if selector[0] == "css":
             by = By.CSS_SELECTOR
-        elif selector[0] == 'xpath':
+        elif selector[0] == "xpath":
             by = By.XPATH
-        elif selector[0] == 'text':
+        elif selector[0] == "text":
             by = By.LINK_TEXT
         return by, selector[1]
 
@@ -135,22 +135,25 @@ class Base:
         return tuple(selector)
 
     def remove_attribute(self, element_id, name_attribute):
-        self.wd.execute_script('document.getElementById("%s").removeAttribute("%s")' % (element_id, name_attribute))
+        self.wd.execute_script(
+            'document.getElementById("%s").removeAttribute("%s")'
+            % (element_id, name_attribute)
+        )
         time.sleep(0.5)
 
     def _click_b(self, selector):
         self.wd.execute_script(f"$({selector}).click();")
 
     def add_element_to_body(self, element):
-        self.wd.execute_script(f'$(\'body\').prepend(\'{element}\')')
+        self.wd.execute_script(f"$('body').prepend('{element}')")
 
     def logs_have_errors(self):
         browser_logs = self.wd.get_log("browser")
         logs = []
         for log in browser_logs:
-            message = log.get('level')
+            message = log.get("level")
             logs.append(message)
-        if 'SEVERE' not in logs:
+        if "SEVERE" not in logs:
             return True
         else:
             return False

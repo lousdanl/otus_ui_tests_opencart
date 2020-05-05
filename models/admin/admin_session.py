@@ -5,12 +5,11 @@ from models import Base
 
 
 class AdminSession(Base):
-
     def __init__(self, wd):
         super().__init__(wd)
-        self.name = 'ADMIN_SESSION'
+        self.name = "ADMIN_SESSION"
         self.logger = logging.getLogger(self.name)
-        self.logger.info(f'Initialization {self.name} page')
+        self.logger.info(f"Initialization {self.name} page")
 
     def find_elements(self):
         """Find elements"""

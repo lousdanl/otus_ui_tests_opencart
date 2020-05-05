@@ -2,7 +2,7 @@ import allure
 
 from models.user import Common, Search
 
-SEARCH_REQUEST = 'macbook'
+SEARCH_REQUEST = "macbook"
 
 
 @allure.severity(allure.severity_level.CRITICAL)

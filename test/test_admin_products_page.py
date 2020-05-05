@@ -5,7 +5,7 @@ from models.admin import AdminProducts, AdminCommon, AdminSession
 from db.check_data import CheckData
 
 PRODUCT = [5]
-IMAGE = ['test_image.jpg']
+IMAGE = ["test_image.jpg"]
 
 
 @allure.severity(allure.severity_level.NORMAL)
@@ -16,7 +16,7 @@ def test_assert_elements(wd, open_admin_page):
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@pytest.mark.parametrize('image', IMAGE)
+@pytest.mark.parametrize("image", IMAGE)
 def test_add_new_product(db, wd, login, image):
     check = CheckData(db)
     common = AdminCommon(wd)
@@ -36,7 +36,7 @@ def test_add_new_product(db, wd, login, image):
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@pytest.mark.parametrize('product_number', PRODUCT)
+@pytest.mark.parametrize("product_number", PRODUCT)
 def test_edit_product(db, wd, login, product_number):
     check = CheckData(db)
     admin_common = AdminCommon(wd)
@@ -58,7 +58,7 @@ def test_edit_product(db, wd, login, product_number):
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@pytest.mark.parametrize('product_number', PRODUCT)
+@pytest.mark.parametrize("product_number", PRODUCT)
 def test_delete_product(db, wd, login, product_number):
     check = CheckData(db)
     admin_common = AdminCommon(wd)
@@ -93,15 +93,20 @@ def test_product_delete(db, wd, login, file_new_product):
     admin_common = AdminCommon(wd)
     admin_common.open_catalog_products()
     admin = AdminProducts(wd)
-
-    product_name, product_model, date_available, date_added = admin.data_for_new_product()
+    (
+        product_name,
+        product_model,
+        date_available,
+        date_added,
+    ) = admin.data_for_new_product()
 
     check.insert_new_product(
-        file_new_product, product_model, date_available, date_added, date_added)
+        file_new_product, product_model, date_available, date_added, date_added
+    )
     product_id = check.get_max_product_id()
     check.insert_new_product_description(
-        file_new_product, product_id, product_name, product_name)
-
+        file_new_product, product_id, product_name, product_name
+    )
     product = admin.find_product_by_id(product_id)
     admin.select_product(product)
     admin.click_button_delete()
@@ -109,8 +114,3 @@ def test_product_delete(db, wd, login, file_new_product):
     admin.wait_alert_success()
     max_id = check.get_max_product_id()
     assert product_id > max_id
-
-
-
-
-

@@ -1,5 +1,5 @@
 class LocatorsCommon:
-    INPUT_FILE = ('css', "input[type='file']")
+    INPUT_FILE = ("css", "input[type='file']")
     # BUTTON_UPLOAD = ('css', '#button-upload')
     FORM_INPUT = """
     $('#form-upload').remove();

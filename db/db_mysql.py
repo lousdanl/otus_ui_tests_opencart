@@ -2,7 +2,6 @@ import pymysql.cursors
 
 
 class DbMySql:
-
     def __init__(self, host, user, password, db, charset):
         self.host = host
         self.user = user
@@ -10,7 +9,9 @@ class DbMySql:
         self.db = db
         self.charset = charset
         self.cursorclass = pymysql.cursors.DictCursor
-        self.connection = pymysql.connect(host=host, user=user, password=password, db=db, charset=charset)
+        self.connection = pymysql.connect(
+            host=host, user=user, password=password, db=db, charset=charset
+        )
         self.connection.autocommit(True)
 
     def select_data(self, sql_request):

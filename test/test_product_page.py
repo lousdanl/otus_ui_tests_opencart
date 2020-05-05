@@ -5,8 +5,7 @@ from locators import LocatorsMain as main
 from locators import LocatorsProduct as products
 from models.user import Main, Product
 
-LIST_PRODUCTS = [main.IPHONE,
-                 main.CANONEOS5D]
+LIST_PRODUCTS = [main.IPHONE, main.CANONEOS5D]
 
 
 @allure.severity(allure.severity_level.NORMAL)
@@ -19,7 +18,7 @@ def test_assert_elements(wd, open_main_page):
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
+@pytest.mark.parametrize("product_from_main", LIST_PRODUCTS)
 def test_open_image(wd, open_main_page, product_from_main):
     main = Main(wd)
     main.select_product(product_from_main)
@@ -32,7 +31,7 @@ def test_open_image(wd, open_main_page, product_from_main):
 
 
 @allure.severity(allure.severity_level.CRITICAL)
-@pytest.mark.parametrize('product_from_main', LIST_PRODUCTS)
+@pytest.mark.parametrize("product_from_main", LIST_PRODUCTS)
 def test_add_to_cart(wd, open_main_page, product_from_main):
     main = Main(wd)
     main.select_product(product_from_main)

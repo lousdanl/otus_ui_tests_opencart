@@ -4,7 +4,6 @@ from selenium.webdriver.support.abstract_event_listener import AbstractEventList
 
 
 class WdEventListener(AbstractEventListener):
-
     def __init__(self, logger):
         self.logger = logger
 
@@ -43,5 +42,10 @@ class WdEventListener(AbstractEventListener):
 
     def on_exception(self, exception, driver):
         self.logger.error(f"An error has occurred: {exception}")
-        file = Path(__file__).resolve().parent.joinpath('screenshots').joinpath('error_screenshot.png')
+        file = (
+            Path(__file__)
+            .resolve()
+            .parent.joinpath("screenshots")
+            .joinpath("error_screenshot.png")
+        )
         driver.save_screenshot(str(file))

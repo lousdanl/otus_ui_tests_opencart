@@ -151,7 +151,10 @@ def db():
 
 @pytest.fixture(scope="session")
 def file_new_product():
-    with open(Path(__file__).resolve().parent.joinpath('test_data/new_product.json'),
-              'r', encoding='utf-8') as product:
+    with open(
+        Path(__file__).resolve().parent.joinpath("test_data/new_product.json"),
+        "r",
+        encoding="utf-8",
+    ) as product:
         reader = json.load(product)
     return reader
