@@ -1,13 +1,13 @@
 {
   "admin": {
-    "username": "admin",
-    "password": "admin"
+    "username": "user",
+    "password": "bitnami1"
   },
   "db": {
-    "host": "127.0.0.1",
-    "user": "root",
+    "host": "192.168.50.44",
+    "user": "bn_opencart",
     "password": "",
-    "db": "opencart",
+    "db": "bitnami_opencart",
     "charset": "utf8mb4"
   }
 }

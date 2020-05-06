@@ -46,7 +46,7 @@ class LocatorsAdmin:
     PRICE_BEFORE = ("css", '[style="text-decoration: line-through;"]')
     PRICE_AFTER = ("css", ".text-danger")
     ELEMENT_PAGINATION = ("css", ".pagination")
-    NEXT_PAGE = ("css", "li:nth-child(3) > a")
+    NEXT_PAGE = ("xpath", "//*[text()='>']")
     FIRST_PAGE = ("xpath", "//*[text()='1']")
     LAST_PAGE = ("xpath", "//*[text()='>|']")
     PREVIOUS_PAGE = ("xpath", "//*[text()='<']")

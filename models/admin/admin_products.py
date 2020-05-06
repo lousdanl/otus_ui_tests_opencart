@@ -6,16 +6,15 @@ from datetime import datetime
 
 from selenium.common.exceptions import (
     NoSuchElementException,
-    StaleElementReferenceException,
+    StaleElementReferenceException
 )
 
 from context_manager import (
     context_manager_for_read_file,
-    context_manager_for_correction_file,
+    context_manager_for_correction_file
 )
 from locators import LocatorsAdmin as admin
 from models import Base, Common
-from db.check_data import CheckData
 
 
 class AdminProducts(Common, Base):
@@ -27,13 +26,10 @@ class AdminProducts(Common, Base):
 
     def get_count_pages(self):
         """Return count pages with products"""
+
         count_pages = self._element(admin.COUNT_PAGES).text
         count_pages = count_pages[-8]
         return int(count_pages)
-
-    def click_next_page(self):
-        pagination = self._in_element(admin.ELEMENT_PAGINATION, admin.NEXT_PAGE)
-        self._click(pagination)
 
     def get_products_from_one_page(self):
         """Return quantity  products on one page"""
@@ -53,12 +49,14 @@ class AdminProducts(Common, Base):
                 get_name = self._in_elements(product, admin.TABLE_PROD_NAME)[0]
                 get_name = get_name.text
                 list_products.append(get_name)
-            if count_pages > 1:
-                self.click_next_page()
+            if i < (count_pages - 1):
+                self._click(admin.NEXT_PAGE)
                 time.sleep(0.1)
             else:
                 break
-        self._click(admin.FIRST_PAGE)
+        if count_pages > 1:
+            self._click(admin.FIRST_PAGE)
+            print('first page')
         return list_products
 
     def get_one_product(self, number):
@@ -257,12 +255,14 @@ class AdminProducts(Common, Base):
 
     def find_product_by_id(self, product_id):
         count_pages = self.get_count_pages()
-        if count_pages > 1:
-            self._click(admin.LAST_PAGE)
+        locator = self.add_id(admin.SELECT_PRODUCT_BY_ID, product_id)
         for i in range(count_pages):
             try:
-                locator = self.add_id(admin.SELECT_PRODUCT_BY_ID, product_id)
                 product = self._element(locator)
-                return product
             except NoSuchElementException:
-                self._click(admin.PREVIOUS_PAGE)
+                if i < (count_pages - 1):
+                    self._click(admin.NEXT_PAGE)
+                    time.sleep(0.1)
+                else:
+                    raise Exception
+        return product

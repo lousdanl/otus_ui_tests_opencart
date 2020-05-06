@@ -21,7 +21,7 @@ def pytest_addoption(parser):
         choices=["chrome", "firefox", "opera"],
     )
     parser.addoption("--executor", action="store", default="192.168.50.109")
-    parser.addoption("--url", action="store", default="http://192.168.50.210/opencart/")
+    parser.addoption("--url", action="store", default="http://192.168.50.44/")
     parser.addoption("--time", action="store", default=0)
     parser.addoption("--file", action="store", default="output.log")
     parser.addoption("--alluredir allure_report", action="store")
@@ -77,6 +77,8 @@ def wd(request, base_url, logger):
         if browser == "chrome":
             options = webdriver.ChromeOptions()
             # options.add_argument('headless')
+            options.add_argument('--ignore-certificate-errors')
+            options.add_argument('--ignore-ssl-errors')
             driver = webdriver.Chrome(options=options)
         elif browser == "firefox":
             options = webdriver.FirefoxOptions()
