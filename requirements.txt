@@ -3,3 +3,4 @@ selenium==3.141.0
 pytest-xdist==1.31.0
 allure-pytest==2.8.13
 pymysql==0.9.3
+paramiko==2.7.1

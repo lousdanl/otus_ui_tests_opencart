@@ -10,6 +10,7 @@ from context_manager import context_manager_for_read_file
 from logs.listener import WdEventListener
 from models.admin import AdminSession
 from db.db_mysql import DbMySql
+from ssh.ssh_client import SshClient
 
 
 def pytest_addoption(parser):
@@ -21,7 +22,7 @@ def pytest_addoption(parser):
         choices=["chrome", "firefox", "opera"],
     )
     parser.addoption("--executor", action="store", default="192.168.50.109")
-    parser.addoption("--url", action="store", default="http://192.168.50.44/")
+    parser.addoption("--url", action="store", default="http://192.168.50.45/")
     parser.addoption("--time", action="store", default=0)
     parser.addoption("--file", action="store", default="output.log")
     parser.addoption("--alluredir allure_report", action="store")
@@ -124,7 +125,7 @@ def load_config(file):
 
 @pytest.fixture()
 def login(wd, open_admin_page):
-    wed_config = load_config("target.json")["admin"]
+    wed_config = load_config("credentials.json")["admin"]
     username = wed_config["username"]
     password = wed_config["password"]
     admin = AdminSession(wd)
@@ -138,7 +139,7 @@ def db():
     """
     Конект к базе данных
     """
-    db_config = load_config("target.json")["db"]
+    db_config = load_config("credentials.json")["db"]
     dbmysql = DbMySql(
         host=db_config["host"],
         user=db_config["user"],
@@ -160,3 +161,17 @@ def file_new_product():
     ) as product:
         reader = json.load(product)
     return reader
+
+
+@pytest.fixture()
+def ssh():
+    ssh_config = load_config("credentials.json")["ssh"]
+    client = SshClient(
+        hostname=ssh_config["hostname"],
+        username=ssh_config["username"],
+        password=ssh_config["password"],
+        port=ssh_config["port"]
+    )
+    yield client
+    client.destroy()
+    return client

@@ -72,7 +72,7 @@ instance/
 docs/_build/
 
 # PyBuilder
-target.json/
+credentials.json/
 
 # Jupyter Notebook
 .ipynb_checkpoints
