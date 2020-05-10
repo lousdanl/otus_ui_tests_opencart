@@ -264,5 +264,5 @@ class AdminProducts(Common, Base):
                     self._click(admin.NEXT_PAGE)
                     time.sleep(0.1)
                 else:
-                    raise Exception
+                    raise Exception("Element not found")
         return product

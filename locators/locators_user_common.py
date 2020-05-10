@@ -2,7 +2,7 @@ class LocatorsUserCommon:
     # MENU
     YOUR_STORE = ("css", "Your Store")
     MENU_DESKTOPS = ("text", "Desktops")
-    SELECT_ALL_DESKTOPS = ("text", "Show AllDesktops")
+    SELECT_ALL_DESKTOPS = ("text", "Show All Desktops")
 
     # SEARCH
     INPUT_SEARCH = ("css", ".form-control.input-lg")
