@@ -2,7 +2,9 @@ import json
 import logging
 from pathlib import Path
 
+import allure
 import pytest
+from allure_commons.types import AttachmentType
 from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 
@@ -22,10 +24,19 @@ def pytest_addoption(parser):
         choices=["chrome", "firefox", "opera"],
     )
     parser.addoption("--executor", action="store", default="192.168.50.109")
-    parser.addoption("--url", action="store", default="http://192.168.50.45/")
+    parser.addoption("--url", action="store", default="http://192.168.50.210/opencart/")
     parser.addoption("--time", action="store", default=0)
     parser.addoption("--file", action="store", default="output.log")
-    parser.addoption("--alluredir allure_report", action="store")
+
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    rep = outcome.get_result()
+    if rep.outcome != 'passed':
+        item.status = 'failed'
+    else:
+        item.status = 'passed'
 
 
 @pytest.fixture(scope="session")
@@ -53,6 +64,14 @@ def logger(request):
     return logger
 
 
+def data_on_failed_test(browser, driver, request):
+    if browser == 'chrome':
+        if request.node.status == 'failed':
+            browser_logs = driver.get_log("browser")
+            allure.attach(body=str(browser_logs), name="Browser logs", attachment_type=AttachmentType.TEXT)
+            allure.attach(driver.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
+
+
 @pytest.fixture()
 def wd(request, base_url, logger):
     """
@@ -77,7 +96,7 @@ def wd(request, base_url, logger):
 
         if browser == "chrome":
             options = webdriver.ChromeOptions()
-            # options.add_argument('headless')
+            options.add_argument('headless')
             options.add_argument('--ignore-certificate-errors')
             options.add_argument('--ignore-ssl-errors')
             driver = webdriver.Chrome(options=options)
@@ -93,6 +112,7 @@ def wd(request, base_url, logger):
     driver.maximize_window()
 
     yield driver
+    data_on_failed_test(browser, driver, request)
     driver.quit()
     logger.info(f"Browser {browser} shutdown")
 
@@ -108,7 +128,6 @@ def base_url(request):
 @pytest.fixture()
 def open_main_page(base_url, wd):
     wd.get(base_url)
-    print("open")
 
 
 @pytest.fixture()

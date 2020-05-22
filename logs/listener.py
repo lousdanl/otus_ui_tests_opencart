@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import datetime
 
 from selenium.webdriver.support.abstract_event_listener import AbstractEventListener
 
@@ -42,10 +43,12 @@ class WdEventListener(AbstractEventListener):
 
     def on_exception(self, exception, driver):
         self.logger.error(f"An error has occurred: {exception}")
+        name_screenshot = f'{datetime.now().strftime("%d-%m-%Y %H-%M-%S")}.png'
         file = (
             Path(__file__)
             .resolve()
-            .parent.joinpath("screenshots")
-            .joinpath("error_screenshot.png")
+            .parent.joinpath('screenshots')
+            .joinpath(name_screenshot)
         )
         driver.save_screenshot(str(file))
+
