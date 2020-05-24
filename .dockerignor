@@ -1,0 +1,6 @@
+env/
+.git/
+.idea/
+output.log
+.allure_report/
+.pytest_cash/
