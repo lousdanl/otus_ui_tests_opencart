@@ -75,11 +75,6 @@ class Base:
         element = self._element_method(selector)
         self.wd.execute_script("arguments[0].click();", element)
 
-    def _click_(self, selector):
-        """Метод для работы с кнопками: не работает """
-        element = self._element_method(selector)
-        ActionChains(self.wd).move_to_element(element).click().perform()
-
     def _input(self, selector, value):
         """Внесение данных"""
         element = self._element_method(selector)
@@ -98,6 +93,10 @@ class Base:
     def _wait_element(self, selector):
         """Ожидание, элемент виден"""
         return self._wait(EC.visibility_of_element_located, selector)
+
+    def _wait_locate(self, selector):
+        """Ожидание, элемент есть в доме"""
+        return self._wait(EC.presence_of_element_located, selector)
 
     def wait_staleness_of(self, selector):
         """Ожидание, элемент пропал"""

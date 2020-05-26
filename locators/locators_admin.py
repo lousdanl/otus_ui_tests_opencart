@@ -11,8 +11,7 @@ class LocatorsAdmin:
 
     # MENU
     CATALOG = "#collapse1"
-    MENU_CATALOG = ("css", "[href=" + CATALOG + "]")
-    PRODUCTS = ("css", CATALOG + " > li:nth-child(2) > a")
+    PRODUCTS = ("css", "#collapse1 > li:nth-child(2) > a")
     ATTRIBUTE_HREF = "href"
 
     # BUTTONS

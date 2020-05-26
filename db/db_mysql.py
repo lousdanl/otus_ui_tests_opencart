@@ -32,5 +32,15 @@ class DbMySql:
         except pymysql.DatabaseError as err:
             print("Error: ", err)
 
+    def insert_data(self, sql_request):
+        try:
+            with self.connection.cursor() as cursor:
+                sql = sql_request
+                cursor.execute(sql)
+                last_id = cursor.lastrowid
+                return last_id
+        except pymysql.DatabaseError as err:
+            print("Error: ", err)
+
     def destroy(self):
         self.connection.close()

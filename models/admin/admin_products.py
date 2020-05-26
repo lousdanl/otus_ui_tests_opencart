@@ -6,13 +6,9 @@ from datetime import datetime
 
 from selenium.common.exceptions import (
     NoSuchElementException,
-    StaleElementReferenceException
-)
+    StaleElementReferenceException,
+    TimeoutException)
 
-from context_manager import (
-    context_manager_for_read_file,
-    context_manager_for_correction_file
-)
 from locators import LocatorsAdmin as admin
 from models import Base, Common
 
@@ -27,7 +23,7 @@ class AdminProducts(Common, Base):
     def get_count_pages(self):
         """Return count pages with products"""
 
-        count_pages = self._element(admin.COUNT_PAGES).text
+        count_pages = self._wait_locate(admin.COUNT_PAGES).text
         count_pages = count_pages[-8]
         return int(count_pages)
 
@@ -41,6 +37,7 @@ class AdminProducts(Common, Base):
 
     def get_name_all_products(self):
         """Return name of all products from all pages"""
+        self._wait_click(admin.FIRST_PAGE)
         count_pages = self.get_count_pages()
         list_products = []
         for i in range(count_pages):
@@ -51,12 +48,10 @@ class AdminProducts(Common, Base):
                 list_products.append(get_name)
             if i < (count_pages - 1):
                 self._click(admin.NEXT_PAGE)
-                time.sleep(0.1)
             else:
                 break
         if count_pages > 1:
-            self._click(admin.FIRST_PAGE)
-            print('first page')
+            self._wait_click(admin.FIRST_PAGE)
         return list_products
 
     def get_one_product(self, number):
@@ -68,14 +63,14 @@ class AdminProducts(Common, Base):
         self._wait_click(admin.ADD_PRODUCT)
 
     def click_save_changes(self):
-        self._click(admin.BUTTON_SAVE)
+        self._wait_click(admin.BUTTON_SAVE)
 
     def click_edit_product(self, product):
         button = self._in_element(product, admin.BUTTON_EDIT)
-        self._click(button)
+        self._wait_click(button)
 
     def click_button_copy(self):
-        self._click(admin.BUTTON_COPY)
+        self._wait_click(admin.BUTTON_COPY)
 
     def click_button_delete(self):
         self._wait_click(admin.BUTTON_DELETE)
@@ -85,14 +80,14 @@ class AdminProducts(Common, Base):
 
     @classmethod
     def read_product_file(cls, file):
-        with context_manager_for_read_file(file) as product_id_file:
+        with open(file, 'r') as product_id_file:
             reader = json.load(product_id_file)
             product_id = reader["product"]
             return product_id
 
     @classmethod
     def write_product_file(cls, file, product_id):
-        with context_manager_for_correction_file(file) as product_id_file:
+        with open(file, 'w') as product_id_file:
             product = {"product": product_id}
             json.dump(product, product_id_file, indent=2)
 
@@ -258,11 +253,11 @@ class AdminProducts(Common, Base):
         locator = self.add_id(admin.SELECT_PRODUCT_BY_ID, product_id)
         for i in range(count_pages):
             try:
-                product = self._element(locator)
-            except NoSuchElementException:
+                product = self._wait_locate(locator)
+            except TimeoutException:
                 if i < (count_pages - 1):
                     self._click(admin.NEXT_PAGE)
-                    time.sleep(0.1)
+                    time.sleep(0.5)
                 else:
                     raise Exception("Element not found")
         return product

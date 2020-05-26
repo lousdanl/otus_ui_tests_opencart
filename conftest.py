@@ -8,7 +8,6 @@ from allure_commons.types import AttachmentType
 from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 
-from context_manager import context_manager_for_read_file
 from logs.listener import WdEventListener
 from models.admin import AdminSession
 from db.db_mysql import DbMySql
@@ -20,11 +19,13 @@ def pytest_addoption(parser):
     parser.addoption(
         "--browser",
         action="store",
-        default="chrome",
-        choices=["chrome", "firefox", "opera"],
+        default="firefox",
+        choices=["chrome", "firefox"],
     )
     parser.addoption("--executor", action="store", default="192.168.50.109")
-    parser.addoption("--url", action="store", default="http://192.168.50.210/opencart/")
+    # "http://192.168.50.210/opencart/" # xampp
+    parser.addoption("--url", action="store", default="http://192.168.50.45/")  # bitnami docker
+
     parser.addoption("--time", action="store", default=0)
     parser.addoption("--file", action="store", default="output.log")
 
@@ -96,13 +97,15 @@ def wd(request, base_url, logger):
 
         if browser == "chrome":
             options = webdriver.ChromeOptions()
-            options.add_argument('headless')
+            # options.add_argument('headless')
             options.add_argument('--ignore-certificate-errors')
             options.add_argument('--ignore-ssl-errors')
             driver = webdriver.Chrome(options=options)
         elif browser == "firefox":
             options = webdriver.FirefoxOptions()
-            options.add_argument("-headless")
+            options.add_argument('--ignore-certificate-errors')
+            options.add_argument('--ignore-ssl-errors')
+            # options.add_argument("-headless")
             driver = webdriver.Firefox(options=options)
 
     logger.info(f"Getting started browser {browser}")
@@ -137,7 +140,7 @@ def open_admin_page(base_url, wd):
 
 def load_config(file):
     config_file = Path(__file__).resolve().parent.joinpath(file)
-    with context_manager_for_read_file(config_file) as conf_file:
+    with open(config_file, 'r') as conf_file:
         target = json.load(conf_file)
     return target
 

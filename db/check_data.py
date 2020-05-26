@@ -32,7 +32,7 @@ class CheckData:
             f"{product['quantity']}, {product['stock_status_id']}, {product['manufacturer_id']},"
             f"{product['tax_class_id']}, '{date_available}', '{date_added}', '{date_modified}');"
         )
-        self.db.update_data(request)
+        return self.db.insert_data(request)
 
     def insert_new_product_description(
         self, file_product, product_id, name, meta_title
@@ -45,4 +45,4 @@ class CheckData:
             f"({product_id}, {product['language_id']}, '{name}', '{product['description']}', "
             f"'{product['tag']}', '{meta_title}', '{product['meta_description']}', '{product['meta_keyword']}');"
         )
-        self.db.update_data(request)
+        return self.db.insert_data(request)
