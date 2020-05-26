@@ -67,7 +67,7 @@ class AdminProducts(Common, Base):
 
     def click_edit_product(self, product):
         button = self._in_element(product, admin.BUTTON_EDIT)
-        self._wait_click(button)
+        self._click(button)
 
     def click_button_copy(self):
         self._wait_click(admin.BUTTON_COPY)
@@ -249,6 +249,7 @@ class AdminProducts(Common, Base):
         return product_name, product_model, date_available, date_added
 
     def find_product_by_id(self, product_id):
+        self.wd.refresh()
         count_pages = self.get_count_pages()
         locator = self.add_id(admin.SELECT_PRODUCT_BY_ID, product_id)
         for i in range(count_pages):

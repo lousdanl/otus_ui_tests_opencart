@@ -19,7 +19,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--browser",
         action="store",
-        default="firefox",
+        default="chrome",
         choices=["chrome", "firefox"],
     )
     parser.addoption("--executor", action="store", default="192.168.50.109")
@@ -97,7 +97,7 @@ def wd(request, base_url, logger):
 
         if browser == "chrome":
             options = webdriver.ChromeOptions()
-            # options.add_argument('headless')
+            options.add_argument('headless')
             options.add_argument('--ignore-certificate-errors')
             options.add_argument('--ignore-ssl-errors')
             driver = webdriver.Chrome(options=options)
@@ -105,7 +105,7 @@ def wd(request, base_url, logger):
             options = webdriver.FirefoxOptions()
             options.add_argument('--ignore-certificate-errors')
             options.add_argument('--ignore-ssl-errors')
-            # options.add_argument("-headless")
+            options.add_argument("-headless")
             driver = webdriver.Firefox(options=options)
 
     logger.info(f"Getting started browser {browser}")
