@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo docker build -t opencart_tests ~/otus_ui_tests_opencart;
-sudo docker run --name opencart opencart_tests;
-sudo docker cp opencart:/app/allure_report ~/otus_ui_tests_opencart;
-sudo allure serve ~/otus_ui_tests_opencart/allure_report;
-sudo rm -rf allure_report;
-sudo docker system prune
+docker build -t opencart_tests .;
+docker run --name opencart opencart_tests;
+docker cp opencart:/app/allure_report .;
+allure serve allure_report;
+rm -rf allure_report;
+docker system prune
