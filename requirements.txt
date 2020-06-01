@@ -1,6 +1,6 @@
-pytest==4.6.10
+pytest==5.4.2
 selenium==3.141.0
-pytest-xdist==1.31.0
-allure-pytest==2.8.13
+pytest-xdist==1.32.0
+allure-pytest==2.8.16
 pymysql==0.9.3
 paramiko==2.7.1
