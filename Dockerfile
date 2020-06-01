@@ -10,4 +10,4 @@ RUN apt-get install allure -y
 RUN pip install -U pip
 RUN --mount=type=cache,target=/home/root/.cache/pip pip3 install -r requirements.txt;
 
-ENTRYPOINT python3 -m pytest -s --alluredir=/app/allure-reports
+CMD python3 -m pytest -s --alluredir=/app/allure-reports
