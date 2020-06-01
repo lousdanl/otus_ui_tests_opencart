@@ -15,14 +15,14 @@ from ssh.ssh_client import SshClient
 
 
 def pytest_addoption(parser):
-    parser.addoption("--selenoid", action="store", default=False)
+    parser.addoption("--selenoid", action="store", default=True)
     parser.addoption(
         "--browser",
         action="store",
         default="chrome",
-        choices=["chrome", "firefox"],
+        choices=["chrome", "firefox"]
     )
-    parser.addoption("--executor", action="store", default="192.168.50.109")
+    parser.addoption("--executor", action="store", default="192.168.50.45")
     # "http://192.168.50.210/opencart/" # xampp
     parser.addoption("--url", action="store", default="http://192.168.50.45/")  # bitnami docker
 
@@ -87,7 +87,8 @@ def wd(request, base_url, logger):
             "browserName": browser,
             "version": "",
             "enableVNC": True,
-            "enableVideo": False,
+            "enableVideo": True,
+            "acceptSslCerts": True
         }
         hub = f"http://{executor}:4444/wd/hub"
         driver = webdriver.Remote(

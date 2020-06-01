@@ -69,7 +69,6 @@ def test_product_delete(db, wd, login, file_new_product):
     product_id = check.insert_new_product(
         file_new_product, product_model, date_available, date_added, date_added
     )
-    print(product_id)
     check.insert_new_product_description(
         file_new_product, product_id, product_name, product_name
     )
