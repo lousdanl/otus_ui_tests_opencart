@@ -87,7 +87,7 @@ def wd(request, base_url, logger):
             "browserName": browser,
             "version": "",
             "enableVNC": True,
-            "enableVideo": True,
+            "enableVideo": False,
             "acceptSslCerts": True
         }
         hub = f"http://{executor}:4444/wd/hub"
