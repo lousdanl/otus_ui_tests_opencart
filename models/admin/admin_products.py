@@ -37,7 +37,7 @@ class AdminProducts(Common, Base):
 
     def get_name_all_products(self):
         """Return name of all products from all pages"""
-        self._wait_click(admin.FIRST_PAGE)
+        # self._wait_click(admin.FIRST_PAGE)
         count_pages = self.get_count_pages()
         list_products = []
         for i in range(count_pages):

@@ -57,7 +57,7 @@ def logger(request):
         logger.addHandler(stream_handler)
     elif type(file) == str:
         file = Path(__file__).resolve().parent.joinpath("logs").joinpath(file)
-        file_handler = logging.FileHandler(file)
+        file_handler = logging.FileHandler(file, encoding='utf-8')
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
     else:
