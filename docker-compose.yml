@@ -28,7 +28,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     volumes:
-    - ./allure_report:/app/allure_report
+    - ./allure_report:/app/allure-report
     depends_on:
       - selenoid
       - selenoid-ui
