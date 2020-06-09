@@ -1,5 +1,3 @@
-// properties([disableConcurrentBuilds()])
-
 pipeline {
     agent {
         label 'master'
@@ -7,17 +5,7 @@ pipeline {
     environment {
      COMPOSE_FILE = "docker-compose.yml"
     }
-//     options {
-//         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-//         timestamps()
-//     }
     stages {
-        stage("First step") {
-            steps {
-                sh "ls -la"
-                sh "/usr/bin/docker-compose --version"
-            }
-        }
         stage("Build and start tests") {
             steps {
                 sh "/usr/bin/docker-compose --version"
@@ -38,7 +26,7 @@ pipeline {
                         jdk: '',
                         properties: [],
                         reportBuildPolicy: 'ALWAYS',
-                        results: [[path: 'target/allure-results']]
+                        results: [[path: 'allure-report']]
                     ])
                     sh "/usr/bin/docker-compose down"
                     sh "docker system prune -f"
