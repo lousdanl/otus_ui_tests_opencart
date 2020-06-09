@@ -32,7 +32,7 @@ pipeline {
                 sh "docker start -a tests"
             }
         }
-        post("Remove containers") {
+        post {
             always {
                 sh "/usr/bin/docker-compose stop"
                 sh "docker system prune -f"
