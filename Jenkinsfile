@@ -26,7 +26,7 @@ pipeline {
                         jdk: '',
                         properties: [],
                         reportBuildPolicy: 'ALWAYS',
-                        results: [[path: 'allure-report']]
+                        results: [[path: 'target/allure-results']]
                     ])
                     sh "/usr/bin/docker-compose down"
                     sh "docker system prune -f"
