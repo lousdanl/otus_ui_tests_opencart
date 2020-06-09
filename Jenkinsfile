@@ -31,8 +31,6 @@ pipeline {
             steps {
                 sh "docker start -a tests"
             }
-        }
-        stage("Remove containers") {
             post {
                 always {
                     sh "/usr/bin/docker-compose stop"
