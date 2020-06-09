@@ -33,9 +33,13 @@ pipeline {
             }
             post {
                 always {
-                    dir ('/allure_report') {
-                    archiveArtifacts artifacts: '**', fingerprint: true
-                    }
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'target/allure-results']]
+                    ])
                     sh "/usr/bin/docker-compose stop"
                     sh "docker system prune -f"
                 }
