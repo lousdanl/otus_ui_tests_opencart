@@ -33,11 +33,11 @@ pipeline {
             }
             post {
                 always {
-                    sh "/usr/bin/docker-compose stop"
-                    sh "docker system prune -f"
-                    dir ('/app/allure_report') {
+                    dir ('/allure_report') {
                     archiveArtifacts artifacts: '**', fingerprint: true
                     }
+                    sh "/usr/bin/docker-compose stop"
+                    sh "docker system prune -f"
                 }
             }
         }
