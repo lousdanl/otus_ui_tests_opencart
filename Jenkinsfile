@@ -32,14 +32,17 @@ pipeline {
                 sh "docker start -a tests"
             }
         }
-        post {
-            always {
-                sh "/usr/bin/docker-compose stop"
-                sh "docker system prune -f"
-                dir ('/app/allure_report') {
-                archiveArtifacts artifacts: '**', fingerprint: true
+        stage("Remove containers") {
+            post {
+                always {
+                    sh "/usr/bin/docker-compose stop"
+                    sh "docker system prune -f"
+                    dir ('/app/allure_report') {
+                    archiveArtifacts artifacts: '**', fingerprint: true
+                    }
                 }
             }
         }
+
     }
 }
