@@ -7,8 +7,8 @@ services:
     volumes:
       - './config:/etc/selenoid'
       - '/var/run/docker.sock:/var/run/docker.sock'
-      - './config/video:/opt/selenoid/video'
-      - './config/logs:/opt/selenoid/logs'
+      - './app/config/video:/opt/selenoid/video'
+      - './app/config/logs:/opt/selenoid/logs'
     ports:
       - '4444:4444'
   selenoid-ui:

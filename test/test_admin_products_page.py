@@ -5,6 +5,7 @@ from models.admin import AdminProducts, AdminCommon, AdminSession
 from db.check_data import CheckData
 
 PRODUCT = [5]
+image = ("Product don't have option")
 IMAGE = ["test_image.jpg"]
 
 

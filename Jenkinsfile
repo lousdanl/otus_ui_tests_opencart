@@ -29,13 +29,16 @@ pipeline {
         }
         stage("Run tests") {
             steps {
-                sh "docker start -i tests"
+                sh "docker start -a tests"
             }
         }
-        stage("Remove containers") {
-            steps {
+        post("Remove containers") {
+            always {
                 sh "/usr/bin/docker-compose stop"
                 sh "docker system prune -f"
+                dir ('/app/allure_report') {
+                archiveArtifacts artifacts: '**', fingerprint: true
+                }
             }
         }
     }

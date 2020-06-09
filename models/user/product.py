@@ -58,7 +58,7 @@ class Product(Base):
             try:
                 self.menu_select_by_index(product.OPTION226, 1)
             except NoSuchElementException:
-                print("Product don't have option")
+                self.logger.info("Product don't have option")
 
     def add_to_cart(self):
         """ CLick button add product to cart"""

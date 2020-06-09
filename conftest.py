@@ -15,7 +15,7 @@ from ssh.ssh_client import SshClient
 
 
 def pytest_addoption(parser):
-    parser.addoption("--selenoid", action="store", default=True)
+    parser.addoption("--selenoid", action="store", default=False)
     parser.addoption(
         "--browser",
         action="store",
@@ -87,7 +87,7 @@ def wd(request, base_url, logger):
             "browserName": browser,
             "version": "",
             "enableVNC": True,
-            "enableVideo": True,
+            "enableVideo": False,
             "acceptSslCerts": True
         }
         hub = f"http://{executor}:4444/wd/hub"
@@ -98,7 +98,7 @@ def wd(request, base_url, logger):
 
         if browser == "chrome":
             options = webdriver.ChromeOptions()
-            options.add_argument('headless')
+            # options.add_argument('headless')
             options.add_argument('--ignore-certificate-errors')
             options.add_argument('--ignore-ssl-errors')
             driver = webdriver.Chrome(options=options)
