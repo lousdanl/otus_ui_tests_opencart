@@ -12,16 +12,32 @@ pipeline {
 //         timestamps()
 //     }
     stages {
+        stage("First step") {
+            steps {
+                sh "ls -la"
+                sh "/usr/bin/docker-compose --version"
+            }
+        }
         stage("Build and start tests") {
             steps {
+                sh "cd otus_ui_tests_opencart"
+                sh "ls"
                 sh "/usr/bin/docker-compose --version"
                 sh "/usr/bin/docker-compose -f ${env.COMPOSE_FILE} build"
-                sh "/usr/bin/docker-compose -f ${env.COMPOSE_FILE} up -d"
+                sh "docker-compose up --no-start"
+                sh "docker start selenoid selenoid-ui"
+                sh "docker ps -a"
+            }
+        }
+        stage("Run tests") {
+            steps {
+                sh "docker start -i tests"
             }
         }
         stage("Remove containers") {
             steps {
-                sh "/usr/bin/docker system prune -f"
+                sh "/usr/bin/docker-compose stop"
+                sh "docker system prune -f"
             }
         }
     }
