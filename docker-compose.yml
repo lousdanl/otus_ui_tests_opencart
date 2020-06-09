@@ -23,6 +23,7 @@ services:
     depends_on:
       - selenoid
   tests:
+    container_name: 'tests'
     build:
       context: ./
       dockerfile: Dockerfile

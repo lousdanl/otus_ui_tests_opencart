@@ -1,38 +1,27 @@
-properties([disableConcurrentBuilds()])
+// properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {
         label 'master'
-        }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
     }
+    environment {
+     COMPOSE_FILE = "otus_ui_tests_opencart/docker-compose.yml"
+    }
+//     options {
+//         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+//         timestamps()
+//     }
     stages {
-        stage("First step") {
+        stage("Build and start tests") {
             steps {
-                sh "free -h"
+                sh "/usr/bin/docker-compose --version"
+                sh "/usr/bin/docker-compose -f ${env.COMPOSE_FILE} build"
+                sh "/usr/bin/docker-compose -f ${env.COMPOSE_FILE} up -d"
             }
         }
-
-        stage("Third step") {
+        stage("Remove containers") {
             steps {
-                sh "git clone https://github.com/lousdanl/otus_ui_tests_opencart.git"
-            }
-        }
-        stage("Fourth step") {
-            steps {
-                sh "docker-compose build"
-            }
-        }
-        stage("Five step") {
-            steps {
-                sh "docker-compose up -d"
-            }
-        }
-        stage("Six step") {
-            steps {
-                sh "docker system prune --volumes"
+                sh "/usr/bin/docker system prune -f"
             }
         }
     }
