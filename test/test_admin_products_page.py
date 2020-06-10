@@ -27,7 +27,7 @@ def test_add_new_product(db, wd, login, image):
     admin.assert_validation_add_form()
     admin.fill_general(product_name)
     admin.fill_data(product_model)
-    admin.added_image(image)
+    # admin.added_image(image)
     admin.click_save_changes()
     products = admin.get_name_all_products()
     assert product_name in products
