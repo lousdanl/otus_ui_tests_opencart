@@ -3,8 +3,8 @@ import logging
 import allure
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
-from locators import LocatorsProduct as product
-from models import Base
+from tests_opencart.locators import LocatorsProduct as product
+from tests_opencart.models import Base
 
 
 class Product(Base):

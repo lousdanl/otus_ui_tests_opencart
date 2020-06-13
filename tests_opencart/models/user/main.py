@@ -3,8 +3,8 @@ import logging
 import allure
 from selenium.common.exceptions import NoSuchElementException
 
-from locators import LocatorsMain as main
-from models import Base
+from tests_opencart.locators import LocatorsMain as main
+from tests_opencart.models import Base
 
 
 class Main(Base):

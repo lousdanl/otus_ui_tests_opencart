@@ -2,8 +2,8 @@ import logging
 
 import allure
 
-from locators import LocatorsSearch as search
-from models import Base
+from tests_opencart.locators import LocatorsSearch as search
+from tests_opencart.models import Base
 
 
 class Search(Base):

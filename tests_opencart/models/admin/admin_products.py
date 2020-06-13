@@ -9,8 +9,8 @@ from selenium.common.exceptions import (
     StaleElementReferenceException,
     TimeoutException)
 
-from locators import LocatorsAdmin as admin
-from models import Base, Common
+from tests_opencart.locators import LocatorsAdmin as admin
+from tests_opencart.models import Base, Common
 
 
 class AdminProducts(Common, Base):
