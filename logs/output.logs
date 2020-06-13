@@ -1,0 +1,715 @@
+2020-06-14 02:14:32: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:14:34: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/admin
+2020-06-14 02:14:34: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/admin
+2020-06-14 02:14:34: ADMIN_SESSION: INFO: __init__ Line:12 Initialization ADMIN_SESSION page
+2020-06-14 02:14:34: DRIVER: INFO: before_find Line:24 Looking for '.panel-default' with 'css selector'
+2020-06-14 02:14:34: DRIVER: INFO: after_find Line:27 Found element '.panel-default' with 'css selector'
+2020-06-14 02:14:35: DRIVER: INFO: before_find Line:24 Looking for '#input-username' with 'css selector'
+2020-06-14 02:14:35: DRIVER: INFO: after_find Line:27 Found element '#input-username' with 'css selector'
+2020-06-14 02:14:35: DRIVER: INFO: before_find Line:24 Looking for '#input-password' with 'css selector'
+2020-06-14 02:14:35: DRIVER: INFO: after_find Line:27 Found element '#input-password' with 'css selector'
+2020-06-14 02:14:35: DRIVER: INFO: before_find Line:24 Looking for '.btn-primary' with 'css selector'
+2020-06-14 02:14:35: DRIVER: INFO: after_find Line:27 Found element '.btn-primary' with 'css selector'
+2020-06-14 02:14:35: DRIVER: INFO: before_find Line:24 Looking for 'Forgotten Password' with 'link text'
+2020-06-14 02:14:35: DRIVER: INFO: after_find Line:27 Found element 'Forgotten Password' with 'link text'
+2020-06-14 02:14:37: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:14:37: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:14:40: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:14:42: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/admin
+2020-06-14 02:14:42: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/admin
+2020-06-14 02:14:42: ADMIN_SESSION: INFO: __init__ Line:12 Initialization ADMIN_SESSION page
+2020-06-14 02:14:42: DRIVER: INFO: before_find Line:24 Looking for '#input-username' with 'css selector'
+2020-06-14 02:14:42: DRIVER: INFO: after_find Line:27 Found element '#input-username' with 'css selector'
+2020-06-14 02:14:42: DRIVER: INFO: before_find Line:24 Looking for '#input-password' with 'css selector'
+2020-06-14 02:14:42: DRIVER: INFO: after_find Line:27 Found element '#input-password' with 'css selector'
+2020-06-14 02:14:42: DRIVER: INFO: before_find Line:24 Looking for '.btn-primary' with 'css selector'
+2020-06-14 02:14:42: DRIVER: INFO: after_find Line:27 Found element '.btn-primary' with 'css selector'
+2020-06-14 02:14:42: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:43: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:43: ADMIN COMMON: INFO: __init__ Line:12 Initialization ADMIN COMMON page
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '#collapse1 > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '#collapse1 > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_navigate_to Line:12 Go to https://192.168.50.45/admin/index.php?route=catalog/product&user_token=fLTTY7OqgRZy14rZI4Vd8lNLovgOm0PJ
+2020-06-14 02:14:43: DRIVER: INFO: after_navigate_to Line:15 Open https://192.168.50.45/admin/index.php?route=catalog/product&user_token=fLTTY7OqgRZy14rZI4Vd8lNLovgOm0PJ
+2020-06-14 02:14:43: COMMON: INFO: __init__ Line:15 Initialization COMMON page
+2020-06-14 02:14:43: ADMIN_PRODUCTS: INFO: __init__ Line:21 Initialization ADMIN_PRODUCTS page
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '//*[text()='>']' with 'xpath'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '//*[text()='>']' with 'xpath'
+2020-06-14 02:14:43: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:43: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '//*[text()='1']' with 'xpath'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '//*[text()='1']' with 'xpath'
+2020-06-14 02:14:43: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:43: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:43: DRIVER: INFO: before_find Line:24 Looking for '[data-original-title="Add New"]' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: after_find Line:27 Found element '[data-original-title="Add New"]' with 'css selector'
+2020-06-14 02:14:43: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:44: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '[data-original-title="Save"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '[data-original-title="Save"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:44: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.alert-danger.alert-dismissible' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.alert-danger.alert-dismissible' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-danger' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-danger' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '[href="#tab-general"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '[href="#tab-general"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:44: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '#input-name1' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '#input-name1' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '#input-meta-title1' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '#input-meta-title1' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '[href="#tab-data"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '[href="#tab-data"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:44: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '#input-price' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '#input-price' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '#input-model' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '#input-model' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '#input-quantity' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '#input-quantity' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '#input-sort-order' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '#input-sort-order' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '#input-status' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '#input-status' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for 'option[value ="1"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element 'option[value ="1"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '[data-original-title="Save"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '[data-original-title="Save"]' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:44: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:44: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '//*[text()='>']' with 'xpath'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '//*[text()='>']' with 'xpath'
+2020-06-14 02:14:45: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:45: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '//*[text()='1']' with 'xpath'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '//*[text()='1']' with 'xpath'
+2020-06-14 02:14:45: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:45: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:45: DRIVER: INFO: before_find Line:24 Looking for '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: after_find Line:27 Found element '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:45: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:45: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:47: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:14:47: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:14:50: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:14:52: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/admin
+2020-06-14 02:14:52: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/admin
+2020-06-14 02:14:52: ADMIN_SESSION: INFO: __init__ Line:12 Initialization ADMIN_SESSION page
+2020-06-14 02:14:52: DRIVER: INFO: before_find Line:24 Looking for '#input-username' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: after_find Line:27 Found element '#input-username' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: before_find Line:24 Looking for '#input-password' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: after_find Line:27 Found element '#input-password' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: before_find Line:24 Looking for '.btn-primary' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: after_find Line:27 Found element '.btn-primary' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:53: ADMIN COMMON: INFO: __init__ Line:12 Initialization ADMIN COMMON page
+2020-06-14 02:14:53: DRIVER: INFO: before_find Line:24 Looking for '#collapse1 > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: after_find Line:27 Found element '#collapse1 > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: before_navigate_to Line:12 Go to https://192.168.50.45/admin/index.php?route=catalog/product&user_token=MF4q0l6TjZw1nVTbS7EfanWahV9DP6ow
+2020-06-14 02:14:53: DRIVER: INFO: after_navigate_to Line:15 Open https://192.168.50.45/admin/index.php?route=catalog/product&user_token=MF4q0l6TjZw1nVTbS7EfanWahV9DP6ow
+2020-06-14 02:14:53: COMMON: INFO: __init__ Line:15 Initialization COMMON page
+2020-06-14 02:14:53: ADMIN_PRODUCTS: INFO: __init__ Line:21 Initialization ADMIN_PRODUCTS page
+2020-06-14 02:14:53: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: before_find Line:24 Looking for '[type="checkbox"]' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: after_find Line:27 Found element '[type="checkbox"]' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: before_find Line:24 Looking for '.text-right' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: after_find Line:27 Found element '.text-right' with 'css selector'
+2020-06-14 02:14:53: DRIVER: INFO: before_find Line:24 Looking for '[style="text-decoration: line-through;"]' with 'css selector'
+2020-06-14 02:14:53: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[style="text-decoration: line-through;"]"}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '[data-original-title="Edit"]' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element '[data-original-title="Edit"]' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:54: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '[href="#tab-data"]' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element '[href="#tab-data"]' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:54: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '#input-price' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element '#input-price' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '[data-original-title="Save"]' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element '[data-original-title="Save"]' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:54: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '.alert-success' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element '.alert-success' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '.text-right' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element '.text-right' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '[style="text-decoration: line-through;"]' with 'css selector'
+2020-06-14 02:14:54: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[style="text-decoration: line-through;"]"}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:14:54: DRIVER: INFO: before_find Line:24 Looking for '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: after_find Line:27 Found element '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:14:54: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:14:54: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:14:57: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:14:57: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:15:00: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:15:02: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/admin
+2020-06-14 02:15:02: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/admin
+2020-06-14 02:15:02: ADMIN_SESSION: INFO: __init__ Line:12 Initialization ADMIN_SESSION page
+2020-06-14 02:15:02: DRIVER: INFO: before_find Line:24 Looking for '#input-username' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: after_find Line:27 Found element '#input-username' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: before_find Line:24 Looking for '#input-password' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: after_find Line:27 Found element '#input-password' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: before_find Line:24 Looking for '.btn-primary' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: after_find Line:27 Found element '.btn-primary' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:02: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:02: ADMIN COMMON: INFO: __init__ Line:12 Initialization ADMIN COMMON page
+2020-06-14 02:15:02: DRIVER: INFO: before_find Line:24 Looking for '#collapse1 > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: after_find Line:27 Found element '#collapse1 > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:15:02: DRIVER: INFO: before_navigate_to Line:12 Go to https://192.168.50.45/admin/index.php?route=catalog/product&user_token=M2iKAbbmAHWbGs6PcU4xIdn3SpAZLbET
+2020-06-14 02:15:03: DRIVER: INFO: after_navigate_to Line:15 Open https://192.168.50.45/admin/index.php?route=catalog/product&user_token=M2iKAbbmAHWbGs6PcU4xIdn3SpAZLbET
+2020-06-14 02:15:03: COMMON: INFO: __init__ Line:15 Initialization COMMON page
+2020-06-14 02:15:03: ADMIN_PRODUCTS: INFO: __init__ Line:21 Initialization ADMIN_PRODUCTS page
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '//*[text()='>']' with 'xpath'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '//*[text()='>']' with 'xpath'
+2020-06-14 02:15:03: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:03: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for 'tbody tr' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element 'tbody tr' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.text-left' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '//*[text()='1']' with 'xpath'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '//*[text()='1']' with 'xpath'
+2020-06-14 02:15:03: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:03: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: after_find Line:27 Found element '.col-sm-6.text-right' with 'css selector'
+2020-06-14 02:15:03: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:03: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:04: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:04: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:05: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:05: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:06: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:06: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:07: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:07: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:07: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:07: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:08: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:08: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:09: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:09: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:10: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:10: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:11: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:11: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:12: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:12: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:12: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:12: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:13: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:13: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value="91"]/../.."}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:14: DRIVER: INFO: before_find Line:24 Looking for '//*[text()='>']' with 'xpath'
+2020-06-14 02:15:14: DRIVER: INFO: after_find Line:27 Found element '//*[text()='>']' with 'xpath'
+2020-06-14 02:15:14: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:14: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:15: DRIVER: INFO: before_find Line:24 Looking for '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:15: DRIVER: INFO: after_find Line:27 Found element '//input[@value="91"]/../..' with 'xpath'
+2020-06-14 02:15:15: DRIVER: INFO: before_find Line:24 Looking for '[type="checkbox"]' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: after_find Line:27 Found element '[type="checkbox"]' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:15: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:15: DRIVER: INFO: before_find Line:24 Looking for '[data-original-title="Delete"]' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: after_find Line:27 Found element '[data-original-title="Delete"]' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:15: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:15: DRIVER: INFO: before_find Line:24 Looking for '.alert-success' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: after_find Line:27 Found element '.alert-success' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: before_find Line:24 Looking for '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: after_find Line:27 Found element '#header > div > ul > li:nth-child(2) > a' with 'css selector'
+2020-06-14 02:15:15: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:15: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:17: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:15:17: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:15:20: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:15:22: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:15:22: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:15:22: USER_COMMON: INFO: __init__ Line:14 Initialization USER_COMMON page
+2020-06-14 02:15:22: DRIVER: INFO: before_find Line:24 Looking for 'Desktops' with 'link text'
+2020-06-14 02:15:22: DRIVER: INFO: after_find Line:27 Found element 'Desktops' with 'link text'
+2020-06-14 02:15:22: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:22: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:22: DRIVER: INFO: before_find Line:24 Looking for 'Show All Desktops' with 'link text'
+2020-06-14 02:15:22: DRIVER: INFO: after_find Line:27 Found element 'Show All Desktops' with 'link text'
+2020-06-14 02:15:22: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:22: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:22: USER_CATEGORY: INFO: __init__ Line:14 Initialization USER_CATEGORY page
+2020-06-14 02:15:22: DRIVER: INFO: before_find Line:24 Looking for '.breadcrumb' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: after_find Line:27 Found element '.breadcrumb' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: before_find Line:24 Looking for '#input-limit' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: after_find Line:27 Found element '#input-limit' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: before_find Line:24 Looking for '#grid-view' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: after_find Line:27 Found element '#grid-view' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: before_find Line:24 Looking for '#list-view' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: after_find Line:27 Found element '#list-view' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: before_find Line:24 Looking for '#input-sort' with 'css selector'
+2020-06-14 02:15:22: DRIVER: INFO: after_find Line:27 Found element '#input-sort' with 'css selector'
+2020-06-14 02:15:25: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:15:25: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:15:27: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:15:30: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:15:30: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:15:30: USER MAIN: INFO: __init__ Line:15 Initialization USER MAIN page
+2020-06-14 02:15:30: DRIVER: INFO: before_find Line:24 Looking for '#slideshow0' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: after_find Line:27 Found element '#slideshow0' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: before_find Line:24 Looking for '#carousel0' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: after_find Line:27 Found element '#carousel0' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: before_find Line:24 Looking for '#content' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: after_find Line:27 Found element '#content' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: before_find Line:24 Looking for '.swiper-pagination-bullet-active' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: after_find Line:27 Found element '.swiper-pagination-bullet-active' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: before_find Line:24 Looking for '[onclick="wishlist.add('40');"]' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: after_find Line:27 Found element '[onclick="wishlist.add('40');"]' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: before_find Line:24 Looking for '[onclick="compare.add('30');"]' with 'css selector'
+2020-06-14 02:15:30: DRIVER: INFO: after_find Line:27 Found element '[onclick="compare.add('30');"]' with 'css selector'
+2020-06-14 02:15:32: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:15:32: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:15:35: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:15:37: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:15:37: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:15:39: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:15:39: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:15:42: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:15:44: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:15:45: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:15:45: USER MAIN: INFO: __init__ Line:15 Initialization USER MAIN page
+2020-06-14 02:15:45: DRIVER: INFO: before_find Line:24 Looking for '[alt="iPhone"]' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: after_find Line:27 Found element '[alt="iPhone"]' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:45: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:45: USER_PRODUCT: INFO: __init__ Line:15 Initialization USER_PRODUCT page
+2020-06-14 02:15:45: DRIVER: INFO: before_find Line:24 Looking for '#content' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: after_find Line:27 Found element '#content' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: before_find Line:24 Looking for '#input-quantity' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: after_find Line:27 Found element '#input-quantity' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: before_find Line:24 Looking for '#button-cart' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: after_find Line:27 Found element '#button-cart' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: before_find Line:24 Looking for '[href="#tab-description"]' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: after_find Line:27 Found element '[href="#tab-description"]' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: before_find Line:24 Looking for '[href="#tab-review"]' with 'css selector'
+2020-06-14 02:15:45: DRIVER: INFO: after_find Line:27 Found element '[href="#tab-review"]' with 'css selector'
+2020-06-14 02:15:47: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:15:47: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:15:50: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:15:52: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:15:53: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:15:53: USER MAIN: INFO: __init__ Line:15 Initialization USER MAIN page
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '[alt="iPhone"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '[alt="iPhone"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: USER_PRODUCT: INFO: __init__ Line:15 Initialization USER_PRODUCT page
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.image-additional a' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.image-additional a' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_find Line:24 Looking for '.mfp-close' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: after_find Line:27 Found element '.mfp-close' with 'css selector'
+2020-06-14 02:15:53: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:15:53: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:15:53: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:15:56: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:15:56: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:15:59: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:16:01: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:16:01: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:16:01: USER MAIN: INFO: __init__ Line:15 Initialization USER MAIN page
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '[alt="Canon EOS 5D"]' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '[alt="Canon EOS 5D"]' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:01: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:01: USER_PRODUCT: INFO: __init__ Line:15 Initialization USER_PRODUCT page
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '.image-additional a' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '.image-additional a' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:01: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:01: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '[title="Next (Right arrow key)"]' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:01: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '.mfp-figure' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '.mfp-figure' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_find Line:24 Looking for '.mfp-close' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: after_find Line:27 Found element '.mfp-close' with 'css selector'
+2020-06-14 02:16:01: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:01: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:01: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:16:04: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:16:04: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:16:07: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:16:09: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:16:09: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:16:09: USER MAIN: INFO: __init__ Line:15 Initialization USER MAIN page
+2020-06-14 02:16:09: DRIVER: INFO: before_find Line:24 Looking for '[alt="iPhone"]' with 'css selector'
+2020-06-14 02:16:09: DRIVER: INFO: after_find Line:27 Found element '[alt="iPhone"]' with 'css selector'
+2020-06-14 02:16:09: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:10: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:10: USER_PRODUCT: INFO: __init__ Line:15 Initialization USER_PRODUCT page
+2020-06-14 02:16:10: DRIVER: INFO: before_find Line:24 Looking for '#content' with 'css selector'
+2020-06-14 02:16:10: DRIVER: INFO: after_find Line:27 Found element '#content' with 'css selector'
+2020-06-14 02:16:10: DRIVER: INFO: before_find Line:24 Looking for 'h1' with 'css selector'
+2020-06-14 02:16:10: DRIVER: INFO: after_find Line:27 Found element 'h1' with 'css selector'
+2020-06-14 02:16:10: DRIVER: INFO: before_find Line:24 Looking for '#input-option226' with 'css selector'
+2020-06-14 02:16:10: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#input-option226"}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:16:10: USER_PRODUCT: INFO: select_option Line:61 Product don't have option
+2020-06-14 02:16:10: DRIVER: INFO: before_find Line:24 Looking for '#button-cart' with 'css selector'
+2020-06-14 02:16:10: DRIVER: INFO: after_find Line:27 Found element '#button-cart' with 'css selector'
+2020-06-14 02:16:10: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:10: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:10: DRIVER: INFO: before_find Line:24 Looking for '.alert-success' with 'css selector'
+2020-06-14 02:16:10: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":".alert-success"}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:16:11: DRIVER: INFO: before_find Line:24 Looking for '.alert-success' with 'css selector'
+2020-06-14 02:16:11: DRIVER: INFO: after_find Line:27 Found element '.alert-success' with 'css selector'
+2020-06-14 02:16:13: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:16:13: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:16:16: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:16:18: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:16:18: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:16:18: USER MAIN: INFO: __init__ Line:15 Initialization USER MAIN page
+2020-06-14 02:16:18: DRIVER: INFO: before_find Line:24 Looking for '[alt="Canon EOS 5D"]' with 'css selector'
+2020-06-14 02:16:18: DRIVER: INFO: after_find Line:27 Found element '[alt="Canon EOS 5D"]' with 'css selector'
+2020-06-14 02:16:18: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:19: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:19: USER_PRODUCT: INFO: __init__ Line:15 Initialization USER_PRODUCT page
+2020-06-14 02:16:19: DRIVER: INFO: before_find Line:24 Looking for '#content' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: after_find Line:27 Found element '#content' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: before_find Line:24 Looking for 'h1' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: after_find Line:27 Found element 'h1' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: before_find Line:24 Looking for '#input-option226' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: after_find Line:27 Found element '#input-option226' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: before_find Line:24 Looking for 'option' with 'tag name'
+2020-06-14 02:16:19: DRIVER: INFO: after_find Line:27 Found element 'option' with 'tag name'
+2020-06-14 02:16:19: DRIVER: INFO: before_click Line:30 Click on <selenium.webdriver.remote.webelement.WebElement (session="7651980f2ab80e1724475f80bbef58d6", element="3a7ee1fd-9bf1-4a78-b490-6689afbe2e36")>
+2020-06-14 02:16:19: DRIVER: INFO: after_click Line:33 Click on <selenium.webdriver.remote.webelement.WebElement (session="7651980f2ab80e1724475f80bbef58d6", element="3a7ee1fd-9bf1-4a78-b490-6689afbe2e36")> is success
+2020-06-14 02:16:19: DRIVER: INFO: before_find Line:24 Looking for '#button-cart' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: after_find Line:27 Found element '#button-cart' with 'css selector'
+2020-06-14 02:16:19: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:19: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:19: DRIVER: INFO: before_find Line:24 Looking for '.alert-success' with 'css selector'
+2020-06-14 02:16:19: DRIVER: ERROR: on_exception Line:45 An error has occurred: Message: no such element: Unable to locate element: {"method":"css selector","selector":".alert-success"}
+  (Session info: chrome=83.0.4103.97)
+
+2020-06-14 02:16:20: DRIVER: INFO: before_find Line:24 Looking for '.alert-success' with 'css selector'
+2020-06-14 02:16:20: DRIVER: INFO: after_find Line:27 Found element '.alert-success' with 'css selector'
+2020-06-14 02:16:22: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:16:22: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:16:25: root: INFO: wd Line:112 Getting started browser chrome
+2020-06-14 02:16:27: DRIVER: INFO: before_navigate_to Line:12 Go to http://192.168.50.45/
+2020-06-14 02:16:27: DRIVER: INFO: after_navigate_to Line:15 Open http://192.168.50.45/
+2020-06-14 02:16:27: USER_COMMON: INFO: __init__ Line:14 Initialization USER_COMMON page
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for '.form-control.input-lg' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element '.form-control.input-lg' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for '.input-group-btn .btn-lg' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element '.input-group-btn .btn-lg' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: before_execute_script Line:36 Executing script:'arguments[0].click();'
+2020-06-14 02:16:27: DRIVER: INFO: after_execute_script Line:39 Executing script 'arguments[0].click();' is done
+2020-06-14 02:16:27: USER_SEARCH: INFO: __init__ Line:14 Initialization USER_SEARCH page
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for '#input-search' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element '#input-search' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for 'select[name="category_id"]' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element 'select[name="category_id"]' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for '#description' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element '#description' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for '#list-view' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element '#list-view' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for '#grid-view' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element '#grid-view' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: before_find Line:24 Looking for '#input-sort' with 'css selector'
+2020-06-14 02:16:27: DRIVER: INFO: after_find Line:27 Found element '#input-sort' with 'css selector'
+2020-06-14 02:16:30: DRIVER: INFO: after_quit Line:42 Browser shutdown
+2020-06-14 02:16:30: root: INFO: wd Line:121 Browser chrome shutdown
+2020-06-14 02:16:30: paramiko.transport: INFO: _log Line:1819 Connected (version 2.0, client OpenSSH_7.6p1)
+2020-06-14 02:16:30: paramiko.transport: INFO: _log Line:1819 Authentication (publickey) failed.
+2020-06-14 02:16:30: paramiko.transport: INFO: _log Line:1819 Authentication (password) successful!

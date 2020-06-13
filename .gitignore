@@ -134,8 +134,6 @@ dmypy.json
 
 # logs
 output.log
-tests_opencart/logs/
-.logs
 # screenshots
 .screenshots
 screenshots/
