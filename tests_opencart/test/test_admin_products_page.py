@@ -1,8 +1,8 @@
 import pytest
 import allure
 
-from models.admin import AdminProducts, AdminCommon, AdminSession
-from db.check_data import CheckData
+from tests_opencart.models import AdminProducts, AdminCommon, AdminSession
+from tests_opencart.db import CheckData
 
 PRODUCT = [5]
 image = ("Product don't have option")

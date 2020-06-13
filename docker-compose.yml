@@ -25,7 +25,7 @@ services:
   tests:
     container_name: 'tests'
     build:
-      context: ./
+      context: ""
       dockerfile: Dockerfile
     volumes:
     - ./allure-results:/app/allure-results

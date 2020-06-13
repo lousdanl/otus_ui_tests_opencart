@@ -2,7 +2,7 @@ FROM python:3.7
 
 WORKDIR /app
 
-COPY . .
+COPY .. .
 
 RUN apt-get update
 RUN apt-get install allure -y

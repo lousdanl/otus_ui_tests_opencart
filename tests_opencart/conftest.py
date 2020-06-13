@@ -8,10 +8,10 @@ from allure_commons.types import AttachmentType
 from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 
-from logs.listener import WdEventListener
-from models.admin import AdminSession
-from db.db_mysql import DbMySql
-from ssh.ssh_client import SshClient
+from tests_opencart.logs import WdEventListener
+from tests_opencart.models import AdminSession
+from tests_opencart.db import DbMySql
+from tests_opencart.ssh import SshClient
 
 
 def pytest_addoption(parser):

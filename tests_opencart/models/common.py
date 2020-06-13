@@ -3,8 +3,8 @@ import re
 import time
 from pathlib import Path
 
-from locators import LocatorsCommon as common
-from models.base import Base
+from tests_opencart.locators import LocatorsCommon as common
+from tests_opencart.models.base import Base
 
 
 class Common(Base):
