@@ -12,7 +12,6 @@ pipeline {
                 sh "/usr/bin/docker-compose build"
                 sh "docker-compose up --no-start"
                 sh "docker start selenoid selenoid-ui"
-                sh "docker ps -a"
             }
         }
         stage("Run tests") {
