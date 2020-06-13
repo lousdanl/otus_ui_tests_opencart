@@ -5,7 +5,7 @@ setup(
     version="1.4",
     packages=find_packages(),
     package_data={
-        "": ["*.json", "*.jpg", "*.txt", "README.md", "docker-compose.yml", "Dockerfile", "Jenkinsfile"]
+        "": ["*.json", "*.jpg", "*.txt", "README.md"]
     },
     author="agrigoreva",
     description="UI Tests for Opencart",
