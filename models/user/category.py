@@ -2,8 +2,8 @@ import logging
 
 import allure
 
-from tests_opencart.locators import LocatorsCategory as category
-from tests_opencart.models.base import Base
+from locators import LocatorsCategory as category
+from models.base import Base
 
 
 class Category(Base):

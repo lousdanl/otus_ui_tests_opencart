@@ -8,10 +8,10 @@ from allure_commons.types import AttachmentType
 from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 
-from tests_opencart.logs import WdEventListener
-from tests_opencart.models import AdminSession
-from tests_opencart.db import DbMySql
-from tests_opencart.ssh import SshClient
+from logs import WdEventListener
+from models.admin import AdminSession
+from db import DbMySql
+from ssh import SshClient
 
 
 def pytest_addoption(parser):
@@ -27,7 +27,7 @@ def pytest_addoption(parser):
     parser.addoption("--url", action="store", default="http://192.168.50.45/")  # bitnami docker
 
     parser.addoption("--time", action="store", default=0)
-    parser.addoption("--file", action="store", default="output.log")
+    parser.addoption("--file", action="store", default="output.logs")
 
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
@@ -98,7 +98,7 @@ def wd(request, base_url, logger):
 
         if browser == "chrome":
             options = webdriver.ChromeOptions()
-            # options.add_argument('headless')
+            options.add_argument('headless')
             options.add_argument('--ignore-certificate-errors')
             options.add_argument('--ignore-ssl-errors')
             driver = webdriver.Chrome(options=options)

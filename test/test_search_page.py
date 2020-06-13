@@ -1,6 +1,6 @@
 import allure
 
-from tests_opencart.models.user import Common, Search
+from models.user import Common, Search
 
 SEARCH_REQUEST = "macbook"
 

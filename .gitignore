@@ -72,7 +72,7 @@ instance/
 docs/_build/
 
 # PyBuilder
-tests_opencart/credentials.json/
+credentials.json/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -132,7 +132,7 @@ dmypy.json
 .idea/
 
 
-# log
+# logs
 output.log
 tests_opencart/logs/
 .logs

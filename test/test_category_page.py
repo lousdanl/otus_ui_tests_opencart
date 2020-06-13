@@ -1,6 +1,6 @@
 import allure
 
-from tests_opencart.models.user import Category, Common
+from models.user import Category, Common
 
 
 @allure.severity(allure.severity_level.NORMAL)

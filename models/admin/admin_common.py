@@ -1,7 +1,7 @@
 import logging
 
-from tests_opencart.locators import LocatorsAdmin as admin
-from tests_opencart.models import Base
+from locators import LocatorsAdmin as admin
+from models import Base
 
 
 class AdminCommon(Base):

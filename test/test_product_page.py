@@ -1,9 +1,9 @@
 import allure
 import pytest
 
-from tests_opencart.locators import LocatorsMain as main
-from tests_opencart.locators import LocatorsProduct as products
-from tests_opencart.models.user import Main, Product
+from locators import LocatorsMain as main
+from locators import LocatorsProduct as products
+from models.user import Main, Product
 
 LIST_PRODUCTS = [main.IPHONE, main.CANONEOS5D]
 

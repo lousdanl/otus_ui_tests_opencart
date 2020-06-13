@@ -2,8 +2,8 @@ import logging
 
 import allure
 
-from tests_opencart.locators import LocatorsUserCommon as common
-from tests_opencart.models import Base
+from locators import LocatorsUserCommon as common
+from models import Base
 
 
 class Common(Base):
