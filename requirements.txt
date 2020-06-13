@@ -4,3 +4,5 @@ pytest-xdist==1.32.0
 allure-pytest==2.8.16
 pymysql==0.9.3
 paramiko==2.7.1
+setuptools==47.1.1
+wheel==0.34.2

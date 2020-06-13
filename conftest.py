@@ -56,8 +56,8 @@ def logger(request):
         stream_handler.setFormatter(formatter)
         logger.addHandler(stream_handler)
     elif type(file) == str:
-        file = Path(__file__).resolve().parent.joinpath("logs").joinpath(file)
-        file_handler = logging.FileHandler(file, encoding='utf-8')
+        file = Path.cwd().resolve().joinpath("logs").joinpath(file)
+        file_handler = logging.FileHandler(str(file), encoding='utf-8')
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
     else:
@@ -140,8 +140,8 @@ def open_admin_page(base_url, wd):
 
 
 def load_config(file):
-    config_file = Path(__file__).resolve().parent.joinpath(file)
-    with open(config_file, 'r') as conf_file:
+    config_file = Path.cwd().resolve().joinpath(file)
+    with open(str(config_file), 'r') as conf_file:
         target = json.load(conf_file)
     return target
 
@@ -178,7 +178,7 @@ def db():
 @pytest.fixture(scope="session")
 def file_new_product():
     with open(
-        Path(__file__).resolve().parent.joinpath("test_data/new_product.json"),
+        str(Path.cwd().joinpath("test_data/new_product.json")),
         "r",
         encoding="utf-8",
     ) as product:

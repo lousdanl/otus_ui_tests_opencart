@@ -136,7 +136,6 @@ dmypy.json
 output.log
 logs/
 .logs
-
 # screenshots
 .screenshots
 screenshots/
