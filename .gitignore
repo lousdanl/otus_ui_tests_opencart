@@ -143,3 +143,7 @@ screenshots/
 .allure_report
 allure_report/
 
+log.html
+output.xml
+report.html
+selenium-screenshot-*.png

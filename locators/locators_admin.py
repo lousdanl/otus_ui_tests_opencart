@@ -7,7 +7,7 @@ class LocatorsAdmin:
     PASSWORD = ("css", "#input-password")
     LOGIN = ("css", ".btn-primary")
     FORGOTTEN_PASSWORD = ("text", "Forgotten Password")
-    LOGOUT = ("css", "#header > div > ul > li:nth-child(2) > a")
+    LOGOUT = ("css", ".nav li span")
 
     # MENU
     CATALOG = "#collapse1"
